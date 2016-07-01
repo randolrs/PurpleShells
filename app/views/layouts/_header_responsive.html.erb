@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang=''>
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="styles.css">
+   <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="script.js"></script>
+   <title>CSS MenuMaker</title>
+</head>
+
+<header>
+   <script>
+      $( document ).ready(function() {
+      $('#cssmenu').prepend('<div id="menu-button">AEA</div>');
+         $('#cssmenu #menu-button').on('click', function(){
+            var menu = $(this).next('ul');
+            if (menu.hasClass('open')) {
+               menu.removeClass('open');
+            }
+            else {
+               menu.addClass('open');
+            }
+         });
+      });
+   </script>
+</header>
+
+<body>
+
+	<div id='cssmenu'>
+
+		
+		<ul>
+
+		   <li><a href='<%=root_path%>'><span><p class="header-left">Classes</p><p class="header-home">Classes</p></span></a></li>
+
+		   <li><a href='<%=root_path%>'><span><p class="header-left">Locations</p><p class="header-home">Locations</p></span></a></li>
+
+		   <a href='<%=root_path%>' class="app-name"><span><p class="header-app-name">PurpleShells</p><p class="header-home">Home</p></span></a>
+
+			<li class="right"><a href='' class="header-user-cta"><span><p class="header-login">Sign In</p><!-- <p class="header-home">Login</p> --></span></a></li>
+
+			<li class="right"><a href='' class="header-user-cta"><span><p class="header-signup">Sign Up</p><!-- <p class="header-home">Signup</p> --></span></a></li>
+
+		</ul>
+
+	</div>
+
+</body>
+<html>
