@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @location.name %>
+</p>
+
+<p>
+  <strong>Address street:</strong>
+  <%= @location.address_street %>
+</p>
+
+<p>
+  <strong>Address city:</strong>
+  <%= @location.address_city %>
+</p>
+
+<p>
+  <strong>Address state or province:</strong>
+  <%= @location.address_state_or_province %>
+</p>
+
+<p>
+  <strong>Address postal code:</strong>
+  <%= @location.address_postal_code %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @location.country %>
+</p>
+
+<p>
+  <strong>Student capacity:</strong>
+  <%= @location.student_capacity %>
+</p>
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>

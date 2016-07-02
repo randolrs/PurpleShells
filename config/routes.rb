@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :locations
+
   resources :class_topics
 
   #devise_for :users

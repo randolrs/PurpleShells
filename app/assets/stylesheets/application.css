@@ -65,4 +65,12 @@ footer.footer-container{
 	bottom:0px;
 	left:0px;
 	right:0px;
+
+}
+
+p.footer-regular-text {
+  	padding:0px;
+  	line-height:40px;
+  	color:#fff;
+
 }

@@ -11,12 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160702181646) do
+ActiveRecord::Schema.define(version: 20160702212609) do
 
   create_table "class_topics", force: true do |t|
     t.integer  "parent_topic_id"
     t.string   "name"
     t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locations", force: true do |t|
+    t.string   "name"
+    t.string   "address_street"
+    t.string   "address_city"
+    t.string   "address_state_or_province"
+    t.string   "address_postal_code"
+    t.string   "country"
+    t.integer  "student_capacity"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -38,6 +50,7 @@ ActiveRecord::Schema.define(version: 20160702181646) do
     t.string   "name"
     t.integer  "source_id"
     t.boolean  "has_active_payment_method", default: false
+    t.integer  "default_location",          default: 1
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

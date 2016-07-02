@@ -53,12 +53,6 @@
 
 				</li>
 
-				<% if current_user.admin %>
-
-					<li class="right"><a href='<%=class_topics_path %>'><span><p class="header-regular-text">Class Topics</p><!-- <p class="header-home">Signup</p> --></span></a></li>
-
-				<%end%>
-
 			<% else %>
 
 				<li class="right"><a href='<%= new_user_session_path %>' class="header-user-cta"><span><p class="header-login">Login</p><!-- <p class="header-home">Login</p> --></span></a></li>
