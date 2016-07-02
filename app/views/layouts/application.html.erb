@@ -20,7 +20,10 @@
 
 </div>
 
-<%= render 'layouts/footer'%>
+<% unless @hide_footer%>
+	<%= render 'layouts/footer'%>
+<%end%>
 
 </body>
+
 </html>

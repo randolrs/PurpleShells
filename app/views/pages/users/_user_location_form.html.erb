@@ -9,25 +9,13 @@
 
 		<div class="user-location-form">
 
-			<form action="update_location" method="post">
+			<h3>Select Your City</h3>
 
-				<select class="user-location-select">
+			<div class="p-transparency"><p class="location-city-option" id="1">New York</p></div>
 
-					<option>My City</option>
+			<div class="p-transparency"><p class="location-city-option" id="2">San Francisco</p></div>
 
-					<% @locations.each do |location| %>
-
-						<option><%= location.name %></option>
-
-					<%end%>
-
-				</select>
-
-				<br>
-
-<!-- 				<input type="submit" value="Submit"> -->
-
-			</form>
+			<div class="p-transparency"><p class="location-city-option" id="0">Other</p></div>
 
 		</div>
 
