@@ -36,6 +36,18 @@ body{
 
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.alert{
+	text-align: center;
+    padding: 10px;
+    color: red;
+    background: rgba(200,0,0,.2);
+
+}
+
 .fixed-header-offset{
 	padding-top:60px;
 	min-height:100%;

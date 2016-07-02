@@ -3,19 +3,79 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .signup-background-container{
-	min-width:100%;
-	min-height:100%;
-	height:100%;
-	width:100%;
-	background: rgba(77, 217, 144, 0.9);
-	padding: 50px;
+    background-image: image-url("swirl_pattern.png");
+    background-image: image-url("old_moon.png");
+    background-image: image-url("felt.png");
+    background-image: image-url("squared_metal.png");
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    bottom: 0px;
+}
+
+.signup-background-transparency{
+	
+	background: rgba(36, 107, 204, 0.4);
+	position: absolute;
+    width: 100%;
+    top: 60px;
+    bottom: 0px;
+
 }
 
 .signup-form{
 	max-width:350px;
 	width:100%;
-	margin: 0 auto;
-	background: #fff;
-	padding:20px;
+	margin: 50px auto;
 	text-align:center;
+	padding: 0px 20px;
+
+	h2{
+		color:#fff;
+		font-size: 70px;
+		font-weight:400;
+		text-shadow: 0px 2px 1px #888;
+	}
+}
+
+input.signup-form-input{	
+	width:100%;
+	border: none;
+    margin-top: 20px;
+    padding: 5px 0px;
+    text-indent:5px;
+    border-radius: 3px;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 0px 2px 1px #888;
+    border: 1px solid #fff;
+	
+}
+
+input.signup-form-input:focus{	
+	
+	
+}
+
+input.signup-form-submit{	
+	background: #25BA90;
+    color: #fff;
+    margin-top: 20px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.15);
+    padding: 10px;
+    font-size: 18px;
+    text-shadow: 0px 1px 1px #444;
+    webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    background-color: #2BD6A6;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#2bd6a6), to(#25ba90));
+    background-image: -webkit-linear-gradient(top, #2bd6a6, #25ba90);
+    background-image: -moz-linear-gradient(top, #2bd6a6, #25ba90);
+    background-image: -ms-linear-gradient(top, #2bd6a6, #25ba90);
+    background-image: -o-linear-gradient(top, #2bd6a6, #25ba90);
+    background-image: linear-gradient(top, #2bd6a6, #25ba90);
+    box-shadow: inset 0px 1px 3px 0px #fff;
+	
 }
