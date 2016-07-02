@@ -76,8 +76,8 @@ input.signup-form-input:focus{
 input.signup-form-submit{	
 	background: #D44924;
     color: #fff;
-    margin-top: 20px;
-    width: 200px;
+    margin-top: 25px;
+    width: 100%;
     border-radius: 5px;
     border: 1px solid rgba(0,0,0,0.15);
     padding: 10px;
@@ -98,5 +98,24 @@ input.signup-form-submit{
 
 input.signup-form-submit:hover{	
 	cursor:pointer;
+	
+}
+
+.user-profile-header-containter{
+	background: #f7f7f7;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    color: #666;
+    min-height: 16px;
+    padding: 0;
+    position: relative;
+    width: auto;
+}
+
+.user-profile-header-content{
+	width:100%;
+	max-width:1000px;
+	margin:0 auto;
+	padding: 5px 0px;
 	
 }

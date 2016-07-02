@@ -1,53 +1,68 @@
-<div class="home-panel" id="main">
+<% unless user_signed_in? %>
 
-	<div class="home-panel-transparency" id="main">
-		
-		<div class="main-cta-container">
+	<div class="home-panel" id="main">
 
-			<h2>Learn Something New</h2>
-			<h3>From Experts</h3>
-			<h3>In-Person</h3>
+		<div class="home-panel-transparency" id="main">
+			
+			<div class="main-cta-container">
 
-			<div class="signup-cta-container">
+				<h2>Learn Something New</h2>
+				<h3>From Experts</h3>
+				<h3>In-Person</h3>
 
-				<a class="signup-main-cta" id="student">Enroll in Classes Now</a>
+				<div class="signup-cta-container">
 
-				<br>
+					<a href="<%= new_user_registration_path %>"class="signup-main-cta" id="student">Enroll in Classes Now</a>
 
-				<a class="signup-main-cta" id="teacher">Teachers, Start Here</a>
+					<br>
+
+					<a class="signup-main-cta" id="teacher">Teachers, Start Here</a>
+
+				</div>
 
 			</div>
 
 		</div>
-
+		
 	</div>
 
-	
+	<div class="home-panel" id="learn">
 
-</div>
+		<div class="home-two-panel-container">
 
-<div class="home-panel" id="learn">
+			<div class="home-two-panel-content" id="panel-2-left">
 
-	<div class="home-two-panel-container">
+				<h1>First Panel, left</h1>
+				<p>Find me in app/views/pages/home.html.erb</p>
 
-		<div class="home-two-panel-content" id="panel-2-left">
 
-			<h1>First Panel, left</h1>
-			<p>Find me in app/views/pages/home.html.erb</p>
+			</div>
+
+			<div class="home-two-panel-content" id="panel-2-right">
+
+				<h1>Second Panel, right</h1>
+				<p>Find me in app/views/pages/home.html.erb</p>
+
+
+			</div>
 
 
 		</div>
 
-		<div class="home-two-panel-content" id="panel-2-right">
-
-			<h1>Second Panel, right</h1>
-			<p>Find me in app/views/pages/home.html.erb</p>
-
-
-		</div>
-
-
 	</div>
 
-</div>
+
+<%else%>
+
+	<% unless @user.basic_profile %>
+
+
+	<%else%>
+
+		<%= render 'pages/users/user_profile_header'%>
+	<%end%>
+
+
+<%end%>
+
 

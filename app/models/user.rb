@@ -17,4 +17,10 @@ class User < ActiveRecord::Base
          	end
          	
          end
+
+
+         def basic_profile
+
+         	return true
+         end
 end
