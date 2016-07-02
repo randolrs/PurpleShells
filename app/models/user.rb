@@ -28,4 +28,10 @@ class User < ActiveRecord::Base
          	
          	return true
          end
+
+         def has_enrolled_in_a_class
+
+         	return false
+
+         end
 end

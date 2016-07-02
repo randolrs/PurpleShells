@@ -1,3 +1,54 @@
 // Place all the styles related to the class_topics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.class-topic-index-container{
+	padding:100px 50px;
+	border-top: 1px solid #D6D8DA !important;
+	background-color:#f6f6f6;
+}
+
+.class-topic-index-content{
+	max-width:1000px;
+	margin: 0 auto;
+	padding: 0px 20px;
+	width: auto;
+}
+
+ul.class-topic-index-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    -webkit-column-count: 4; /* Chrome, Safari, Opera */
+    -moz-column-count: 4; /* Firefox */
+    column-count: 4;
+}
+
+li.class-topic-index-column {
+    display: inline-block !important;
+    margin-bottom: 26px !important;
+    width: 100% !important;
+    word-wrap: break-word !important;
+    text-align: justify;
+}
+
+ul.class-topic-index-entries {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+li.class-topic-index-entry{
+	display: inline-block !important;
+    margin-bottom: 3px !important;
+    width: 100% !important;
+    word-wrap: break-word !important;
+    text-align: justify;
+	
+}
+
+
+a.class-topic-index-entry{
+	width:100%;
+}

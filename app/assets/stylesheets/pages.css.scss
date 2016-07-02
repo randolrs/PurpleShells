@@ -8,14 +8,14 @@
 	background: #ccc;
 
 	#main{
-		background: yellow;
+		background: #eee;
 	}
 
 }
 
 .home-panel#main{
 	
-	background: yellow;
+	background: #eee;
 	background-image: image-url("student-background.jpg");
 	background-image: image-url("hands-people-woman-meeting.jpg");
 	background-size: 100% 100%;
@@ -135,5 +135,86 @@
 	min-height:300px;
 	display: inline-block;
 	width: 49.5%;
+}
+
+.non-enrolled-user-dashboard{
+	height:100%;
+	padding-bottom: 80px;
+	background-color:#f6f6f6;
+}
+
+
+
+.welcome-user-dashboard{
+    bottom: 0px;
+    position: relative;
+    left: 0px;
+    right: 0px;
+    padding:40px;
+    border-top: 1px solid #D6D8DA !important;
+	
+}
+
+.welcome-user-dashboard-inner{
+	width:700px;
+	margin:0 auto;
+	text-align:center;
+
+
+
+	h3{
+		font-size: 50px;
+		font-weight:400;
+		margin-bottom:20px;
+		color: #333;
+	}
+
+	p{
+		font-size:20px;
+		color: #555;
+	}
+
+
+}
+
+.dashboard-upcoming-classes{
+	height:300px;
+	background:#fff;
+	padding:50px;
+}
+
+.dashboard-upcoming-classes-inner{
+	max-width:1000px;
+	width:auto;
+	margin:0 auto;
+
+	h3{
+		width:100%;
+		font-size:30px;
+		color: #666;
+		border-bottom: 2px solid #222;
+	}
+
+}
+
+ul.dashboard-panel-horizontal-list{
+
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    -webkit-column-count: 4; /* Chrome, Safari, Opera */
+    -moz-column-count: 4; /* Firefox */
+    column-count: 4;
+	
+}
+
+li.dashboard-panel-horizontal-item{
+
+	display: inline-block !important;
+    margin-bottom: 26px !important;
+    width: 100% !important;
+    word-wrap: break-word !important;
+    text-align: justify;
+	
 }
 

@@ -1,0 +1,35 @@
+<div class="class-topic-index-container">
+
+  <div class="class-topic-index-content">
+
+    <ul class="class-topic-index-list">
+
+      <% @topics_index.each do |topic| %>
+
+        <li class="class-topic-index-column">
+
+          <h3><%= topic.name %></h3>
+
+          <ul class="class-topic-index-entries">
+
+            <% topic.child_topics.each do |child_topic| %>
+
+              <li class="class-topic-index-entry">
+
+                <a class="class-topic-index-entry"><%= child_topic.name %></a>
+
+              </li>
+
+            <% end %>
+
+          </ul>
+
+        </li>
+
+      <% end %>
+
+    </ul>
+
+  </div>
+
+</div>
