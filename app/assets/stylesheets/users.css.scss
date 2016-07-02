@@ -34,7 +34,7 @@
 		color:#fff;
 		font-size: 70px;
 		font-weight:400;
-		text-shadow: 0px 2px 1px #888;
+		text-shadow: 0px 3px 5px #333;
 	}
 }
 
@@ -42,23 +42,39 @@ input.signup-form-input{
 	width:100%;
 	border: none;
     margin-top: 20px;
-    padding: 5px 0px;
+    padding: 10px 0px;
     text-indent:5px;
     border-radius: 3px;
     font-size: 18px;
     text-align: center;
-    box-shadow: 0px 2px 1px #888;
-    border: 1px solid #fff;
-	
+    box-shadow: 0px 2px 5px #666;
+	border: #fff solid 3px;
 }
 
 input.signup-form-input:focus{	
-	
+    border: #D44924 solid 3px;
+    box-shadow: 0px 2px 8px #ddd;
 	
 }
 
+::-webkit-input-placeholder {
+   color: #666;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #666;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #666;  
+}
+
+:-ms-input-placeholder {  
+   color: #666;  
+}
+
 input.signup-form-submit{	
-	background: #25BA90;
+	background: #D44924;
     color: #fff;
     margin-top: 20px;
     width: 200px;
@@ -69,13 +85,18 @@ input.signup-form-submit{
     text-shadow: 0px 1px 1px #444;
     webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
-    background-color: #2BD6A6;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#2bd6a6), to(#25ba90));
-    background-image: -webkit-linear-gradient(top, #2bd6a6, #25ba90);
-    background-image: -moz-linear-gradient(top, #2bd6a6, #25ba90);
-    background-image: -ms-linear-gradient(top, #2bd6a6, #25ba90);
-    background-image: -o-linear-gradient(top, #2bd6a6, #25ba90);
-    background-image: linear-gradient(top, #2bd6a6, #25ba90);
+    background-color: #D44924;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#D44924), to(#D44924));
+    background-image: -webkit-linear-gradient(top, #D44B3B, #D44924);
+    background-image: -moz-linear-gradient(top, #D44B3B, #D44924);
+    background-image: -ms-linear-gradient(top, #D44924, #D44924);
+    background-image: -o-linear-gradient(top, #D44924, #D44924);
+    background-image: linear-gradient(top, #D44924, #D44924);
     box-shadow: inset 0px 1px 3px 0px #fff;
+	
+}
+
+input.signup-form-submit:hover{	
+	cursor:pointer;
 	
 }

@@ -34,15 +34,33 @@
 		
 		<ul>
 
-		   <li><a href='<%=root_path%>'><span><p class="header-left">Classes</p><p class="header-home">Classes</p></span></a></li>
+		   <li><a href='<%=root_path%>'><span><p class="header-regular-text ">Classes</p><p class="header-home">Classes</p></span></a></li>
 
-		   <li><a href='<%=root_path%>'><span><p class="header-left">Locations</p><p class="header-home">Locations</p></span></a></li>
+		   <li><a href='<%=root_path%>'><span><p class="header-regular-text ">Locations</p><p class="header-home">Locations</p></span></a></li>
 
 		   <a href='<%=root_path%>' class="app-name"><span><p class="header-app-name">PopupSchools</p><p class="header-home">Home</p></span></a>
 
-			<li class="right"><a href='<%= new_user_session_path %>' class="header-user-cta"><span><p class="header-login">Login</p><!-- <p class="header-home">Login</p> --></span></a></li>
+		   <% if user_signed_in?%>
 
-			<li class="right"><a href='<%= new_user_registration_path %>' class="header-user-cta"><span><p class="header-signup">Sign Up</p><!-- <p class="header-home">Signup</p> --></span></a></li>
+				<li class="right" class='active has-sub'>
+					<a href='<%= new_user_session_path %>' class="header-user-cta" title="Your Profile Settings"><span><p class='header-regular-text'><%if current_user.full_name %><%= current_user.full_name %><%else%>Anonymous<%end%></p><!-- <p class="header-home">Login</p> --></span></a>
+
+					<ul>
+            			<li><a href="<%=edit_user_registration_path%>"><span>My Profile</span></a>
+            			<li><a><span>Account Settings</span></a>
+            			<li><a data-method="delete" href='<%=destroy_user_session_path%>'><span>Logout</span></a>
+         			</ul>
+
+				</li>
+
+			<% else %>
+
+				<li class="right"><a href='<%= new_user_session_path %>' class="header-user-cta"><span><p class="header-login">Login</p><!-- <p class="header-home">Login</p> --></span></a></li>
+
+				<li class="right"><a href='<%= new_user_registration_path %>' class="header-user-cta"><span><p class="header-signup">Sign Up</p><!-- <p class="header-home">Signup</p> --></span></a></li>
+
+
+			<%end%>
 
 		</ul>
 
