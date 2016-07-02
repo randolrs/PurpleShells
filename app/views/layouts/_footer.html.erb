@@ -1,12 +1,15 @@
 <footer class="footer-container">
 
-	<% if current_user.admin %>
+	<% if user_signed_in? %>
 
-	<a href='<%=class_topics_path %>'><span><p class="footer-regular-text">Class Topics</p><!-- <p class="header-home">Signup</p> --></span></a>
+		<% if current_user.admin %>
 
-    <a href='<%=locations_path %>'><span><p class="footer-regular-text">Locations</p></span></a>
+		<a href='<%=class_topics_path %>'><span><p class="footer-regular-text">Class Topics</p><!-- <p class="header-home">Signup</p> --></span></a>
+
+	    <a href='<%=locations_path %>'><span><p class="footer-regular-text">Locations</p></span></a>
+
+		<%end%>
 
 	<%end%>
-
 
 </div>
