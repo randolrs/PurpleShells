@@ -222,3 +222,26 @@ li.dashboard-panel-horizontal-item{
 	
 }
 
+a.dismiss-cover-page{
+    border: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 40px;
+    top: -40px;
+    font-size:40px;
+    font-weight:700;
+    color:#666;
+    margin-top:30px;
+    text-shadow: 0px 2px 1px #ccc;
+}
+
+a.dismiss-cover-page:hover{
+    cursor:pointer;
+    text-decoration:none;
+    color:red;
+    webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+
+}
+

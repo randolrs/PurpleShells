@@ -2,6 +2,8 @@ class PagesController < ApplicationController
   def home
 
   	  	@topics_index = ClassTopic.all.where(:parent_topic_id =>1)
+
+  	  	@locations = Location.all
   	  	
   	if user_signed_in?
 

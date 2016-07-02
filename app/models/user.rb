@@ -34,4 +34,10 @@ class User < ActiveRecord::Base
          	return false
 
          end
+
+         def set_default_location
+
+         	return false
+
+         end
 end

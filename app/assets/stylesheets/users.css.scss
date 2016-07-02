@@ -119,3 +119,47 @@ input.signup-form-submit:hover{
 	padding: 5px 0px;
 	
 }
+
+.user-location-container{
+	position:fixed;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	z-index:1000000;
+    background-image: image-url("swirl_pattern.png");
+}
+
+.user-location-transparency{
+	position:fixed;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	background: rgba(200,0,0,.3);
+}
+
+.user-location-form{
+    margin: 0 auto;
+    padding:150px 0px;
+    max-width:800px;
+    width: auto;
+    text-align:center;
+    h3{
+        font-size:70px;
+        color:#333;
+    }
+
+    select.user-location-select{
+        font-size:60px;
+        background:none;
+        border:none;
+        color:#222;
+
+    }
+}
+
+select.user-location-select:focus{
+        outline:none;
+        
+    }

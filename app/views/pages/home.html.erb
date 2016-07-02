@@ -54,12 +54,20 @@
 
 <%else%>
 
+
+	<%unless @user.set_default_location%>
+
+		<%= render 'pages/users/user_location_form', locals: {locations: @locations} %>
+
+	<%end%>
+
+
 	<% if @user.has_enrolled_in_a_class %>
 
 		<%= render 'pages/users/user_profile_header'%>
 
 	<%else%>
-		
+	
 		<div class="non-enrolled-user-dashboard">
 				
 			<%= render 'class_topics/index_by_category', locals: {topics: @topics_index} %>
@@ -108,14 +116,17 @@
 						<li class="dashboard-panel-horizontal-item">Entry 8</li>
 
 					</ul>
-					
+
 				</div>
 
 			</div>
 
 		</div>
-		
+	
 	<%end%>
+
+
+	
 
 
 <%end%>

@@ -1,0 +1,36 @@
+
+<div class="user-location-container">
+
+	<div class="user-location-transparency">
+
+		<a class="dismiss-cover-page">
+			+
+		</a>
+
+		<div class="user-location-form">
+
+			<form action="update_location" method="post">
+
+				<select class="user-location-select">
+
+					<option>My City</option>
+
+					<% @locations.each do |location| %>
+
+						<option><%= location.name %></option>
+
+					<%end%>
+
+				</select>
+
+				<br>
+
+<!-- 				<input type="submit" value="Submit"> -->
+
+			</form>
+
+		</div>
+
+	</div>
+</div>
+
