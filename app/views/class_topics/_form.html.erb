@@ -1,0 +1,29 @@
+<%= form_for(@class_topic) do |f| %>
+  <% if @class_topic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@class_topic.errors.count, "error") %> prohibited this class_topic from being saved:</h2>
+
+      <ul>
+      <% @class_topic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    Parent Topic<br>
+    <%= collection_select(:class_topic, :parent_topic_id, ClassTopic.all, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

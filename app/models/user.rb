@@ -23,4 +23,9 @@ class User < ActiveRecord::Base
 
          	return true
          end
+
+         def admin
+         	
+         	return true
+         end
 end

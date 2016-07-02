@@ -1,0 +1,29 @@
+<h1>Listing class_topics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parent topic</th>
+      <th>Name</th>
+      <th>Url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @class_topics.each do |class_topic| %>
+      <tr>
+        <td><%= class_topic.parent_topic_id %></td>
+        <td><%= class_topic.name %></td>
+        <td><%= class_topic.url %></td>
+        <td><%= link_to 'Show', class_topic %></td>
+        <td><%= link_to 'Edit', edit_class_topic_path(class_topic) %></td>
+        <td><%= link_to 'Destroy', class_topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Class topic', new_class_topic_path %>

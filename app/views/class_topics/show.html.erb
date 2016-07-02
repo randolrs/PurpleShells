@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Parent topic:</strong>
+  <%= @class_topic.parent_topic_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @class_topic.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @class_topic.url %>
+</p>
+
+<%= link_to 'Edit', edit_class_topic_path(@class_topic) %> |
+<%= link_to 'Back', class_topics_path %>

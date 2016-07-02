@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :class_topics
+
   #devise_for :users
 
   devise_for :users, :path_names => { :sign_up => "signup", :sign_in => "login"}
