@@ -22,7 +22,23 @@ class PagesController < ApplicationController
 
   def classes_summary
 
+  	if user_signed_in?
+
+  		if current_user.city_id
+
+  			@city = City.find(current_user.city_id)
+  		end
+
+  	end
+
   	@topics_index = ClassTopic.all.where(:parent_topic_id =>1)
+
+  end
+
+  def user_profile
+
+  	
+
 
   end
 

@@ -179,7 +179,6 @@
 }
 
 .dashboard-upcoming-classes{
-	height:300px;
 	background:#fff;
 	padding:50px;
 }
@@ -194,13 +193,22 @@
 		font-size:30px;
 		color: #666;
 		border-bottom: 2px solid #999;
-		font-weight: 500;
+		font-weight: 400;
 	}
+
+	span.panel-header-see-all{
+		float:right;
+		font-size:20px;
+		line-height: 42px;
+		color: blue;
+		font-weight:500;
+	}
+
 
 }
 
 .dashboard-panel-horizontal-container{
-	margin-bottom:20px;
+	margin-bottom:40px;
 }
 
 ul.dashboard-panel-horizontal-list{
@@ -222,13 +230,6 @@ li.dashboard-panel-horizontal-item{
     word-wrap: break-word !important;
     text-align: justify;
 	
-}
-
-span.panel-header-see-all{
-	float:right;
-	font-size:20px;
-	line-height: 42px;
-	color: blue;
 }
 
 a.dismiss-cover-page{

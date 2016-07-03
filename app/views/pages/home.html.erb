@@ -16,7 +16,7 @@
 
 					<br>
 
-					<a class="signup-main-cta" id="teacher">Teachers, Start Here</a>
+					<a href="<%= new_user_registration_path(:teacher=> true) %>" class="signup-main-cta" id="teacher">Teachers, Start Here</a>
 
 				</div>
 
@@ -61,68 +61,76 @@
 
 	<%end%>
 
+	<%if current_user.is_teacher %>
 
-	<% if current_user.has_enrolled_in_a_class %>
-
-		<%= render 'pages/users/user_profile_header'%>
+		Hey Teach
 
 	<%else%>
-	
-		<div class="non-enrolled-user-dashboard">
-				
-			<%= render 'class_topics/index_by_category', locals: {topics: @topics_index} %>
-
-			<div class="welcome-user-dashboard">
-
-				<div class="welcome-user-dashboard-inner">
-
-					<h3>Welcome to PopupSchools!</h3>
-					<p>Ready to learn from experts in <%= current_user.city_name %>? Start by choosing a subject above or one of our upcoming classes below.</p>
-				</div>
 
 
-			</div>
+		<% if current_user.has_enrolled_in_a_class %>
 
-		</div>
+			<%= render 'pages/users/user_profile_header'%>
 
-		<div class="dashboard-upcoming-classes">
-
-			<div class="dashboard-upcoming-classes-inner">
-
-				<div class="dashboard-panel-horizontal-container">
+		<%else%>
+		
+			<div class="non-enrolled-user-dashboard">
 					
-					<h3>Upcoming Classes in <%= current_user.city_name %> <span class="panel-header-see-all">Full Class Schedule</span></h3>
+				<%= render 'class_topics/index_by_category', locals: {topics: @topics_index} %>
 
-					<ul class="dashboard-panel-horizontal-list">
+				<div class="welcome-user-dashboard">
 
-						<li class="dashboard-panel-horizontal-item">Entry 1</li>
-						<li class="dashboard-panel-horizontal-item">Entry 2</li>
-						<li class="dashboard-panel-horizontal-item">Entry 3</li>
-						<li class="dashboard-panel-horizontal-item">Entry 4</li>
+					<div class="welcome-user-dashboard-inner">
 
-					</ul>
+						<h3>Welcome to PopupSchools!</h3>
+						<p>Ready to learn from experts in <%= current_user.city_name %>? Start by choosing a subject above or one of our upcoming classes below.</p>
+					</div>
 
-				</div>
-
-				<div class="dashboard-panel-horizontal-container">
-
-					<h3>Top Instructors in <%= current_user.city_name %><span class="panel-header-see-all">All Instructors</span></h3>
-
-					<ul class="dashboard-panel-horizontal-list">
-
-						<li class="dashboard-panel-horizontal-item">Entry 5</li>
-						<li class="dashboard-panel-horizontal-item">Entry 6</li>
-						<li class="dashboard-panel-horizontal-item">Entry 7</li>
-						<li class="dashboard-panel-horizontal-item">Entry 8</li>
-
-					</ul>
 
 				</div>
 
 			</div>
 
-		</div>
-	
+			<div class="dashboard-upcoming-classes">
+
+				<div class="dashboard-upcoming-classes-inner">
+
+					<div class="dashboard-panel-horizontal-container">
+						
+						<h3>Upcoming Classes in <%= current_user.city_name %> <span class="panel-header-see-all">Full Class Schedule</span></h3>
+
+						<ul class="dashboard-panel-horizontal-list">
+
+							<li class="dashboard-panel-horizontal-item">Entry 1</li>
+							<li class="dashboard-panel-horizontal-item">Entry 2</li>
+							<li class="dashboard-panel-horizontal-item">Entry 3</li>
+							<li class="dashboard-panel-horizontal-item">Entry 4</li>
+
+						</ul>
+
+					</div>
+
+					<div class="dashboard-panel-horizontal-container">
+
+						<h3>Top Instructors in <%= current_user.city_name %><span class="panel-header-see-all">All Instructors</span></h3>
+
+						<ul class="dashboard-panel-horizontal-list">
+
+							<li class="dashboard-panel-horizontal-item">Entry 5</li>
+							<li class="dashboard-panel-horizontal-item">Entry 6</li>
+							<li class="dashboard-panel-horizontal-item">Entry 7</li>
+							<li class="dashboard-panel-horizontal-item">Entry 8</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+
+			</div>
+		
+		<%end%>
+
 	<%end%>
 
 <%end%>

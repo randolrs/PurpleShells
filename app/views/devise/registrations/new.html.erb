@@ -17,7 +17,11 @@
 
 		  <div><%= f.password_field :password, autocomplete: "off", placeholder: "Password", class:"signup-form-input"  %></div>
 
-		  <%= hidden_field_tag 'is_teacher', false  %>
+		  <% if params[:teacher] == "true" %>
+		  	
+		  	<%= hidden_field_tag :is_teacher, true  %>
+		  
+		  <%end%>
 
 		  <div><%= f.submit "Create Account", class:"signup-form-submit"   %></div>
 

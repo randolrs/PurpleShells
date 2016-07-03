@@ -22,6 +22,7 @@ ready = ->
 						console.log(data)
 						alert("success")
 						cityPanel.hide()
+						location.reload(true)
 						
 
 

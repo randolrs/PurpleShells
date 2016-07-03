@@ -8,7 +8,7 @@
 		<div class="welcome-user-dashboard-inner">
 
 			<h3>Welcome to PopupSchools!</h3>
-			<p>Ready to learn from experts in your city? Start by choosing a subject above or one of our upcoming classes below.</p>
+			<p>Ready to learn from experts in <% if @city %><%= @city.name %><% else %>your city<% end %>? Start by choosing a subject above or one of our upcoming classes below.</p>
 		</div>
 
 
