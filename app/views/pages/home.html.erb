@@ -67,22 +67,49 @@
 
 			<div class="teacher-dashboard-menu">
 
-				<div class="teacher-menu-header">
-				
-					<h3>Shane Randolph</h3>
+				<div class="teacher-dashboard-menu-content">
+
+					<div class="teacher-menu-header">
+					
+						<h3>Shane Randolph</h3>
+
+					</div>
+
+					<ul>
+						<li><a>My Courses</a></li>
+						<li><a>Balance</a></li>
+					</ul>
 
 				</div>
 
-				<ul>
-					<li><a>My Classes</a></li>
-					<li><a>Balance</a></li>
-				</ul>
+				<% if current_user.has_a_saved_class %>
+
+					<p class="teacher-dashboard-add-class-cta">Create a New Course</p>
+
+				<% end %>
 
 			</div>
 
 			<div class="teacher-dashboard-classes">
 
-				right
+				<% unless current_user.has_a_saved_class %>
+
+					<div class="teacher-dashboard-class-content empty">
+
+						<div class="empty-dashboard-container">
+							<%= link_to new_course_path, :class => "no-style" do %>
+							<p class="teacher-dashboard-add-class-cta empty">Create a New Course</p>
+							<%end%>
+
+						</div>
+
+					</div>
+
+				<%else%>
+
+					placeholder for regular behavior
+				<%end%>
+				
 			</div>
 
 		</div>
@@ -105,7 +132,7 @@
 					<div class="welcome-user-dashboard-inner">
 
 						<h3>Welcome to PopupSchools!</h3>
-						<p>Ready to learn from experts in <%= current_user.city_name %>? Start by choosing a subject above or one of our upcoming classes below.</p>
+						<p>Ready to learn from experts in <%= current_user.city_name %>? Start by choosing a subject above or one of our upcoming courses below.</p>
 					</div>
 
 

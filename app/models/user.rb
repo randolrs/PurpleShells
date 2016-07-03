@@ -59,4 +59,10 @@ class User < ActiveRecord::Base
          	return false
 
          end
+
+         def has_a_saved_class
+
+            return false
+
+         end
 end

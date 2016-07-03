@@ -187,48 +187,56 @@ div.teacher-dashboard-container{
 	.teacher-dashboard-menu{
 		display:inline-block;
 		width:298px;
-		background: #fff;
 		vertical-align: top;
-		border: 1px solid #ddd;
+		padding-right: 20px;
 
-		.teacher-menu-header{
+		.teacher-dashboard-menu-content{
+			width:auto;
+			background:#fff;
+			border: 1px solid #ddd;
 
-			h3{
-				border-bottom: 1px solid #ddd;
-    			color: #555;
-    			padding: 15px 20px;
-    			font-size: 24px;
-			}
+			.teacher-menu-header{
 
-		}
-
-		ul{
-
-			list-style-type: none;
-    		margin: 0;
-    		padding: 0;
-
-
-			li{
-
-				display: inline-block !important;
-    			width: 100% !important;
-    			word-wrap: break-word !important;
-    			text-align: justify;
-    			padding:10px 0px;
-
-    			a{
-    				padding:0px 10px;
-    			}
+				h3{
+					border-bottom: 1px solid #ddd;
+	    			color: #555;
+	    			padding: 15px 20px;
+	    			font-size: 24px;
+				}
 
 			}
 
-			li:hover{
+			ul{
 
-				background:#666;
-				cursor:pointer;
+				list-style-type: none;
+	    		margin: 0;
+	    		padding: 0;
 
+
+				li{
+
+					display: inline-block !important;
+	    			width: 100% !important;
+	    			word-wrap: break-word !important;
+	    			text-align: justify;
+	    			padding:10px 0px;
+
+	    			a{
+	    				padding:0px 20px;
+	    				color: #333;
+	    				font-size: 20px;
+	    			}
+
+				}
+
+				li:hover{
+
+					background:rgba(44,255,37,0.4);
+					cursor:pointer;
+
+				}
 			}
+
 		}
 
 
@@ -236,14 +244,73 @@ div.teacher-dashboard-container{
 
 	.teacher-dashboard-classes{
 		display:inline-block;
-		height:200px;
-		width:693px;
-		background: #fff;
+		width:670px;
 		vertical-align: top;
-		border: 1px solid #ddd;
+
+
+		.teacher-dashboard-class-content{
+			width:auto;
+			padding: 0 10px;
+			border: 3px dashed #ddd;
+		}
 	}
 
 
+}
+
+div.empty-dashboard-container{
+	padding:100px 0px;
+	margin:0 auto;	
+}
+
+p.teacher-dashboard-add-class-cta{
+	
+	text-align:center;
+	width:auto;
+	background: #26DB20;
+    color: #fff;
+    margin: 25px 10px 0px 10px;
+    border-radius: 40px;
+    padding: 10px 0px;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    font-size: 24px;
+    text-shadow: 0px 1px 1px #444;
+    webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    background-color: #26DB20;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#26DB20), to(#26DB20));
+    background-image: -webkit-linear-gradient(top, #26DB20, #26DB20);
+    background-image: -moz-linear-gradient(top, #26DB20, #26DB20);
+    background-image: -ms-linear-gradient(top, #26DB20, #26DB20);
+    background-image: -o-linear-gradient(top, #26DB20, #26DB20);
+    background-image: linear-gradient(top, #26DB20, #26DB20);
+    box-shadow: inset 0px 1px 3px 0px #fff;
+
+    .empty{
+    	margin-top:0px;
+    }
+}
+
+p.teacher-dashboard-add-class-cta.empty{
+	
+    margin: 0 auto;
+    width:50%;
+}
+
+p.teacher-dashboard-add-class-cta:hover{
+	
+	cursor:pointer;
+	border: 2px solid #26DB20;
+	background: #1CA318;
+	box-shadow: inset 0px 0px 2px 0px #fff;
+}
+
+.empty-dashboard-container{
+	padding:0px 20px;
+}
+
+a.no-style{
+	text-decoration:none;
 }
 
 
