@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160702212609) do
+ActiveRecord::Schema.define(version: 20160703054556) do
+
+  create_table "cities", force: true do |t|
+    t.string   "name"
+    t.string   "country"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "class_topics", force: true do |t|
     t.integer  "parent_topic_id"
@@ -31,6 +38,7 @@ ActiveRecord::Schema.define(version: 20160702212609) do
     t.integer  "student_capacity"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "city_id"
   end
 
   create_table "users", force: true do |t|
@@ -51,6 +59,8 @@ ActiveRecord::Schema.define(version: 20160702212609) do
     t.integer  "source_id"
     t.boolean  "has_active_payment_method", default: false
     t.integer  "default_location",          default: 1
+    t.integer  "default_city_id"
+    t.integer  "city_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

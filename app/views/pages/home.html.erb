@@ -55,14 +55,14 @@
 <%else%>
 
 
-	<%unless @user.set_default_location%>
+	<%unless current_user.city_id %>
 
 		<%= render 'pages/users/user_location_form', locals: {locations: @locations} %>
 
 	<%end%>
 
 
-	<% if @user.has_enrolled_in_a_class %>
+	<% if current_user.has_enrolled_in_a_class %>
 
 		<%= render 'pages/users/user_profile_header'%>
 
@@ -77,7 +77,7 @@
 				<div class="welcome-user-dashboard-inner">
 
 					<h3>Welcome to PopupSchools!</h3>
-					<p>Ready to learn from experts in your city? Start by choosing a subject from one of our upcoming classes below</p>
+					<p>Ready to learn from experts in <%= current_user.city_name %>? Start by choosing a subject above or one of our upcoming classes below.</p>
 				</div>
 
 
@@ -91,7 +91,7 @@
 
 				<div class="dashboard-panel-horizontal-container">
 					
-					<h3>Upcoming Classes @ [location name placeholder]</h3>
+					<h3>Upcoming Classes in <%= current_user.city_name %> <span class="panel-header-see-all">Full Class Schedule</span></h3>
 
 					<ul class="dashboard-panel-horizontal-list">
 
@@ -106,7 +106,7 @@
 
 				<div class="dashboard-panel-horizontal-container">
 
-					<h3>Top Instructors @ [location name placeholder]</h3>
+					<h3>Top Instructors in <%= current_user.city_name %><span class="panel-header-see-all">All Instructors</span></h3>
 
 					<ul class="dashboard-panel-horizontal-list">
 

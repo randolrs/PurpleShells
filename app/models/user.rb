@@ -4,6 +4,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+    belongs_to :city
+
+
+
 
          def full_name
 
@@ -16,6 +20,21 @@ class User < ActiveRecord::Base
 
          	end
          	
+         end
+
+         def city_name
+
+            if self.city_id
+
+                cityName = City.find(self.city_id).name
+
+                return cityName
+            else
+
+
+                return "your city"
+            end
+
          end
 
 

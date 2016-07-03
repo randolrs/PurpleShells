@@ -164,9 +164,10 @@
 
 	h3{
 		font-size: 50px;
-		font-weight:400;
-		margin-bottom:20px;
-		color: #333;
+    	font-weight: 400;
+    	margin-bottom: 20px;
+    	color: blue;
+    	text-shadow: 0px 2px 3px #aaa;
 	}
 
 	p{
@@ -192,7 +193,8 @@
 		width:100%;
 		font-size:30px;
 		color: #666;
-		border-bottom: 2px solid #222;
+		border-bottom: 2px solid #999;
+		font-weight: 500;
 	}
 
 }
@@ -220,6 +222,13 @@ li.dashboard-panel-horizontal-item{
     word-wrap: break-word !important;
     text-align: justify;
 	
+}
+
+span.panel-header-see-all{
+	float:right;
+	font-size:20px;
+	line-height: 42px;
+	color: blue;
 }
 
 a.dismiss-cover-page{

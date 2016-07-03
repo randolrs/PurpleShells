@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .class-topic-index-container{
-	padding:100px 50px;
+	padding:50px;
 	border-top: 1px solid #D6D8DA !important;
 	background-color:#f6f6f6;
 }
@@ -13,6 +13,15 @@
 	margin: 0 auto;
 	padding: 0px 20px;
 	width: auto;
+
+    h2{
+        width:100%;
+        text-align:center;
+        font-size:30px;
+        margin:30px 0px;
+        color: #333;
+        font-weight: 400;
+    }
 }
 
 ul.class-topic-index-list {

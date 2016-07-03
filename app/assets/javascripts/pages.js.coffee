@@ -12,5 +12,18 @@ ready = ->
 				coverPage = $(@).parent().parent()
 				coverPage.hide()
 
+			$("p.location-city-option").click (event), ->
+				cityPanel = $(@).parent().parent().parent().parent()
+				cityID = $(@).attr('id')
+				$.ajax
+					url: "/user/city/#{cityID}", format: 'js'
+					type: "GET"
+					success: (data) ->
+						console.log(data)
+						alert("success")
+						cityPanel.hide()
+						
+
+
 $(document).ready(ready)
 $(document).on('page:load', ready)

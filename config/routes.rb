@@ -12,7 +12,9 @@ Rails.application.routes.draw do
 
   root 'pages#home'
 
-  get 'users/:id/' => 'users#show', as: 'question_show'
+  get "/user/city/:cityID", :to => 'pages#user_city_initialize'
+
+  get 'classes' => "pages#classes_summary"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

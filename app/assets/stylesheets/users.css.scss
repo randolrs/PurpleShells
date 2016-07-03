@@ -136,7 +136,7 @@ input.signup-form-submit:hover{
 	bottom:0px;
 	left:0px;
 	right:0px;
-	background: rgba(255,0,0,.2);
+    background: rgba(36, 107, 204, 0.4);
 }
 
 .user-location-form{
@@ -149,7 +149,7 @@ input.signup-form-submit:hover{
     h3{
         font-size:80px;
         color:#333;
-        text-shadow: 0px 2px 0px #eee;
+        text-shadow: 0px 1px 3px #fff;
     }
 
     p.location-city-option{
@@ -158,12 +158,10 @@ input.signup-form-submit:hover{
         margin: 30px 0px;
         font-size: 40px;
         box-shadow: inset 0px 1px 3px 0px #fff;
-
-        background-color: rgba(0, 0, 0, .3);
+        background-color: rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         color: white;
         border-bottom: 1px solid #246BCC;
-        box-shadow: inset 0px 1px 1px 0px #bbb;
         border: 1px solid rgba(0, 0, 0, 0.15);
         text-shadow: 0px 1px 0px #16437F;
         
@@ -189,7 +187,7 @@ select.user-location-select:focus{
         
     }
 
-div.p-transparent{
-    background:red;
-    background-image: image-url("squared_metal.png");
+div.p-transparency{
+    background: rgba(255,50,50,1);
+    border-radius: 5px;
 }

@@ -31,12 +31,28 @@
 
 	<div id='cssmenu'>
 
-		
 		<ul>
 
-		   <li><a href='<%=root_path%>'><span><p class="header-regular-text">Classes</p><p class="header-home">Classes</p></span></a></li>
+         <% if user_signed_in? %>
 
-		   <li><a href='<%=root_path%>'><span><p class="header-regular-text">Locations</p><p class="header-home">Locations</p></span></a></li>
+            <%if current_user.city_id %>
+            
+               <li><a href='<%=root_path%>'><span><p class="header-regular-text"><%= City.find(current_user.city_id).name %></p><p class="header-home">Locations</p></span></a></li>
+            
+            <%else%>
+
+               <li><a href='<%=root_path%>'><span><p class="header-regular-text">Locations</p><p class="header-home">Locations</p></span></a></li>
+            
+             <%end%>
+
+
+         <%else%>
+
+            <li><a href='<%=root_path%>'><span><p class="header-regular-text">Locations</p><p class="header-home">Locations</p></span></a></li>
+
+         <%end%>
+
+		   <li><a href='<%=classes_path%>'><span><p class="header-regular-text">Classes</p><p class="header-home">Classes</p></span></a></li>
 
 		   <a href='<%=root_path%>' class="app-name"><span><p class="header-app-name">PopupSchools</p><p class="header-home">Home</p></span></a>
 
