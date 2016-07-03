@@ -178,6 +178,75 @@
 
 }
 
+div.teacher-dashboard-container{
+	margin:0 auto;
+	padding:50px;
+	max-width:1000px;
+	width:100%;
+
+	.teacher-dashboard-menu{
+		display:inline-block;
+		width:298px;
+		background: #fff;
+		vertical-align: top;
+		border: 1px solid #ddd;
+
+		.teacher-menu-header{
+
+			h3{
+				border-bottom: 1px solid #ddd;
+    			color: #555;
+    			padding: 15px 20px;
+    			font-size: 24px;
+			}
+
+		}
+
+		ul{
+
+			list-style-type: none;
+    		margin: 0;
+    		padding: 0;
+
+
+			li{
+
+				display: inline-block !important;
+    			width: 100% !important;
+    			word-wrap: break-word !important;
+    			text-align: justify;
+    			padding:10px 0px;
+
+    			a{
+    				padding:0px 10px;
+    			}
+
+			}
+
+			li:hover{
+
+				background:#666;
+				cursor:pointer;
+
+			}
+		}
+
+
+	}
+
+	.teacher-dashboard-classes{
+		display:inline-block;
+		height:200px;
+		width:693px;
+		background: #fff;
+		vertical-align: top;
+		border: 1px solid #ddd;
+	}
+
+
+}
+
+
 .dashboard-upcoming-classes{
 	background:#fff;
 	padding:50px;
@@ -210,6 +279,7 @@
 .dashboard-panel-horizontal-container{
 	margin-bottom:40px;
 }
+
 
 ul.dashboard-panel-horizontal-list{
 
