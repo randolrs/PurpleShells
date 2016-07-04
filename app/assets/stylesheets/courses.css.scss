@@ -23,7 +23,7 @@
 	margin:0 auto;
 	height:200px;
 	background:#fff;
-	border: 1px solid rgba(0,0,0,0.3);
+	border: 1px solid rgba(0,0,0,0.7);
     border-radius: 6px;
     box-shadow: 0 3px 7px rgba(0,0,0,0.3);
 	top:150px;
@@ -35,6 +35,7 @@
 		line-height: 40px;
 	    font-size: 20px;
 	    padding: 10px 15px;
+	    border-radius: 6px 6px 0px 0px;
 	    background: #ddd;
 	    border-bottom: 1px solid #aaa;
 	    color: #222;
