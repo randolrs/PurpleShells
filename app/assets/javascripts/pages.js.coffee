@@ -27,8 +27,10 @@ ready = ->
 			$("span.dismiss-modal").click (event), ->
 				coverPage = $(@).parent().parent().parent()
 				coverPage.hide()
-						
 
+			$("p.modal-submit").click (event), ->
+				ajaxLoading = $('body').find('.ajax-loading')
+				ajaxLoading.show()
 
 $(document).ready(ready)
 $(document).on('page:load', ready)

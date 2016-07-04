@@ -77,3 +77,18 @@ p.footer-regular-text {
   	color:#fff;
 
 }
+
+.ajax-loading{
+  height:100%;
+  width:100%;
+  position:fixed;
+  top:0px;
+  left:0px;
+  z-index:900000;
+  background: rgba(255,255,255,0.9);
+  display: none;
+  background-image: url("https://s3.amazonaws.com/projectaea/ajax-loader.gif");
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
