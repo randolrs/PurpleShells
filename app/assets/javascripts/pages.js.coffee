@@ -23,6 +23,10 @@ ready = ->
 						alert("success")
 						cityPanel.hide()
 						location.reload(true)
+			
+			$("span.dismiss-modal").click (event), ->
+				coverPage = $(@).parent().parent().parent()
+				coverPage.hide()
 						
 
 
