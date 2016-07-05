@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :course_sessions
+
   resources :courses
 
   resources :locations
@@ -15,6 +17,8 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   get "/user/city/:cityID", :to => 'pages#user_city_initialize'
+
+  get '/course/create/:courseName', :to => 'courses#ajax_create'
 
   get 'classes' => "pages#classes_summary"
 

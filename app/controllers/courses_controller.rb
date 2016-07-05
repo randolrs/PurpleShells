@@ -37,6 +37,29 @@ class CoursesController < ApplicationController
     end
   end
 
+  def ajax_create
+
+    if user_signed_in?
+    
+      @course = Course.new
+
+      @course.update(:title => params[:courseName], :user_id => current_user.id)
+
+      if @course.save
+
+        render json: { :redirect_url => edit_course_path(@course), :notice=> notice, content_type: 'text/json' }
+    
+      else
+        
+        render json: { :redirect_url => root_path, :notice=> notice, content_type: 'text/json' }
+     
+      end
+
+    end
+
+
+  end
+
   # PATCH/PUT /courses/1
   # PATCH/PUT /courses/1.json
   def update
@@ -69,6 +92,6 @@ class CoursesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
-      params.require(:course).permit(:user_id, :title, :description, :location_id, :city_id)
+      params.require(:course).permit(:user_id, :title, :description, :location_id, :city_id, course_sessions_attributes:[:title, :description, :course_id, :user_id])
     end
 end

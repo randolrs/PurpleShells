@@ -6,8 +6,7 @@ class User < ActiveRecord::Base
 
     belongs_to :city
 
-
-
+    has_many :course_sessions
 
          def full_name
 

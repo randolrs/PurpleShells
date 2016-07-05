@@ -11,27 +11,75 @@
     </div>
   <% end %>
 
+  <div class="course-form-container">
+
+    <div class="course-form-menu">
+
+      <div class="course-form-menu-content">
+
+        <div class="course-form-header">
+        
+          <%= f.text_field :title,  placeholder: "Course Title", class: "course-title-header" %><br>
+          <%= f.text_area :description,  placeholder: "Course Description", class: "course-description-header" %>
+ 
+          <ul>
+              <li><a>Sessions:</a></li>
+              <li><a>Price:</a></li>
+          </ul>
+
+          <%= f.submit "Submit Course for Approval", class: "course-submit-for-approval" %>
+
+        </div>
+
+      </div>
+
+    </div>
+    
+    <div class="course-form-session-container">
+
+      <h3>Sessions</h3>
+
+      <div class="course-form-sessions <% unless @course.course_sessions.count > 0 %>empty<%end%>">
+
+
+
+  <!--       <p class="add_fields" id="courses">Add a Session</p> -->
+
+        <%= f.fields_for :course_sessions do |builder| %>
+          
+          <%= render 'course_session_fields', f: builder %>
+
+        <% end %>
+        
+        <%= link_to_add_fields "Add a Session", f, :course_sessions %>
+        
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+<!-- <div class="field">
+    <%# f.label :user_id %><br>
+    <%# f.number_field :user_id %>
+  </div> -->
+
+<!--   <div class="field">
+    <%# f.label :location_id %><br>
+    <%# f.number_field :location_id %>
+  </div>
+
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :location_id %><br>
-    <%= f.number_field :location_id %>
-  </div>
-  <div class="field">
-    <%= f.label :city_id %><br>
-    <%= f.number_field :city_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <%# f.label :city_id %><br>
+    <%# f.number_field :city_id %> 
+  </div> -->
+
 <% end %>

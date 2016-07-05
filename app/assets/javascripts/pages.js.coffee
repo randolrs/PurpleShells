@@ -28,9 +28,46 @@ ready = ->
 				coverPage = $(@).parent().parent().parent()
 				coverPage.hide()
 
+			$('.dismiss-course-session-container').click (event), ->
+				courseSessionContainer = $(@).parent()
+				courseSessionContainer.hide()
+
+			$("p.teacher-dashboard-add-class-cta").click (event), ->
+				courseModal = $('body').find('div.course-name-modal')
+				courseModal.show()
+				event.preventDefault()
+
 			$("p.modal-submit").click (event), ->
+				courseNameInput = $(@).parent().find('input.modal-text-input#title')
+				courseName = courseNameInput.val()
+				$.ajax
+					url: "/course/create/#{courseName}", format: 'js'
+					type: "GET"
+					success: (data) ->
+						console.log(data)
+						if data.redirect_url
+							window.location.replace(data.redirect_url);
+			
+			$("p.form-continue").click (event), ->
 				ajaxLoading = $('body').find('.ajax-loading')
 				ajaxLoading.show()
+
+			$('form').on 'click', '.remove_fields', (event) ->
+    			$(this).prev('input[type=hidden]').val('1')
+    			$(this).closest('fieldset').hide()
+    			event.preventDefault()
+
+  			$('form').on 'click', '.add_fields', (event) ->
+    			$(@).parent().removeClass("empty");
+    			time = new Date().getTime()
+    			regexp = new RegExp($(this).data('id'), 'g')
+    			$(this).before($(this).data('fields').replace(regexp, time))
+    			$('body').find('.course-submit-for-approval').slideDown()
+    			event.preventDefault()
+
+    		$('form').on 'click', '.add_fields.course_sessions', (event) ->
+    			alert("addition")
+    			event.preventDefault()
 
 $(document).ready(ready)
 $(document).on('page:load', ready)

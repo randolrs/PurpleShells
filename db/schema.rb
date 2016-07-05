@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160703214433) do
+ActiveRecord::Schema.define(version: 20160705182215) do
 
   create_table "cities", force: true do |t|
     t.string   "name"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 20160703214433) do
     t.integer  "parent_topic_id"
     t.string   "name"
     t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "course_sessions", force: true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.integer  "user_id"
+    t.integer  "course_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

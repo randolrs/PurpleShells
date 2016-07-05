@@ -86,6 +86,8 @@
 
 					<p class="teacher-dashboard-add-class-cta">Create a New Course</p>
 
+					<%= render 'courses/modal_create' %>
+
 				<% end %>
 
 			</div>
@@ -97,9 +99,11 @@
 					<div class="teacher-dashboard-class-content empty">
 
 						<div class="empty-dashboard-container">
-							<%= link_to new_course_path, :class => "no-style" do %>
+							<%# link_to new_course_path, :class => "no-style" do %>
 							<p class="teacher-dashboard-add-class-cta empty">Create a New Course</p>
-							<%end%>
+
+							<%= render 'courses/modal_create' %>
+							<%#end%>
 
 						</div>
 
