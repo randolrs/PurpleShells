@@ -33,10 +33,12 @@
           
         <%= link_to_add_fields "Add a Session", f, :course_sessions %>
 
+        <input class="number-of-sessions" hidden type="number" val= <%=@course.course_sessions.count%> ></input>
+
       </div>
 
       <div class="course-form-submit <% unless @course.course_sessions.count > 0 %>empty<%end%>">
-
+        - OR -
         <%= f.submit "Save and Submit Course for Approval", class: "course-submit-for-approval" %>
 
       </div>
