@@ -485,17 +485,20 @@ a.dismiss-course-session-container:hover{
 	float:left;	
 	vertical-align: top;
 	height: 120px;
+	background-image: image-url("swirl_pattern.png");
 
-	background: rgba(100,255,100,0.8);
+	
     text-align: center;
     color: #333;
     font-size: 24px;
     text-shadow: 0px 1px 0px #ccc;
 
     p{
+    	background: rgba(100,255,100,0.8);
     	line-height: 30px;
     	padding: 45px 0px;
     	font-size: 24px;
+    	border-right: 1px solid #aaa;
     }
 }
 
