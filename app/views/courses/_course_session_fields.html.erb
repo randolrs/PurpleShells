@@ -4,8 +4,18 @@
     +
   </a>
 
-  <%= f.text_field :title, placeholder: "Title", class: "course-session-title-input" %><br />
-  <%= f.text_area :description, placeholder: "Description", class: "course-session-description-input" %><br />
+  <div class="course-session-numbers">
+
+    <p>Session #1</p>
+
+  </div>
+
+  <div class="course-session-details">
+
+    <%= f.text_field :title, placeholder: "Title", class: "course-session-title-input", autofocus: true %>
+    <%= f.text_area :description, placeholder: "Description", class: "course-session-description-input" %>
+
+  </div>
   <%# f.check_box :_destroy %>
   <%# f.label :_destroy, "Remove Sessions" %>
 

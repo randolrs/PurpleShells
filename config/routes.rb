@@ -24,6 +24,8 @@ Rails.application.routes.draw do
 
   get 'me' => "pages#user_profile"
 
+  get '/courses/get_started/:course_id' => "courses#first_edit", as: 'course_first_edit'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

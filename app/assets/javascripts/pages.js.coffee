@@ -62,12 +62,13 @@ ready = ->
 
   			$('form').on 'click', '.add_fields', (event) ->
     			$(@).parent().removeClass("empty")
+    			submitContainer = $('body').find('.course-form-submit')
     			container = $('body').find('.course-form-session-container')
     			container.addClass("empty")
     			time = new Date().getTime()
     			regexp = new RegExp($(this).data('id'), 'g')
     			$(this).before($(this).data('fields').replace(regexp, time))
-    			$('body').find('.course-submit-for-approval').slideDown()
+    			submitContainer.slideDown()
     			event.preventDefault()
 
     		$('form').on 'click', '.add_fields.course_sessions', (event) ->

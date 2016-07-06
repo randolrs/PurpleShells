@@ -21,6 +21,10 @@ class CoursesController < ApplicationController
   def edit
   end
 
+  def first_edit
+    @course = Course.find(params[:course_id])
+  end
+
   # POST /courses
   # POST /courses.json
   def create
@@ -47,7 +51,7 @@ class CoursesController < ApplicationController
 
       if @course.save
 
-        render json: { :redirect_url => edit_course_path(@course), :notice=> notice, content_type: 'text/json' }
+        render json: { :redirect_url => course_first_edit_path(@course.id), :notice=> notice, content_type: 'text/json' }
     
       else
         

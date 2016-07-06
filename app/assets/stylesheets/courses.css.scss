@@ -118,9 +118,76 @@ p.modal-submit:hover{
 
 div.course-form-container{
 	margin:0 auto;
-	padding:50px;
 	max-width:1000px;
 	width:100%;
+	padding: 50px 50px 0px 50px;
+
+
+	.center-submit{
+		text-align:center;
+		margin: 0 auto;
+		max-width: 500px;
+		width:auto;
+		padding: 20px;
+
+	}
+
+	.course-form-content{
+		width:auto;
+		max-width:500px;
+		padding: 10px;
+		margin: 0 auto;
+
+		.course-submit-for-approval{
+			width:100%;
+		    padding: 10px 0px;
+		    text-align: center;
+		    margin: 0 auto;
+		    font-size: 24px;
+		    background: red;
+		    opacity: .85;
+		    color: white;
+		    border-bottom: 1px solid #246BCC;
+		    box-shadow: inset 0px 1px 1px 0px #bbb;
+		    border: 1px solid rgba(0, 0, 0, 0.15);
+		    text-shadow: 0px 1px 0px #16437F;
+		    font-weight: 500;
+		 
+		}
+
+		.course-submit-for-approval:hover{
+			cursor:pointer;
+
+		}
+
+		h3{
+			padding: 20px 0px;
+    		font-size: 24px;
+    		color: #666;
+    		font-weight: 400;
+    		border-bottom: 2px solid #ccc;
+    		margin: 10px 0px 20px 0px;
+			}
+
+		.course-form-submit{
+			text-align:center;
+			margin-top:20px;
+			
+		}
+
+		.course-form-submit.empty{
+			display:none;
+		
+		}
+
+
+
+
+
+
+
+
+	}
 
 	.course-form-menu{
 		display:inline-block;
@@ -131,6 +198,8 @@ div.course-form-container{
 		.course-form-menu-content{
 			width:auto;
 			border-radius: 0px 0px 5px 5px;
+
+
 
 			.course-form-header{
 
@@ -253,13 +322,19 @@ div.course-form-container{
 		padding-left:20px;
 		border-left: 2px solid #ccc;
 
+
+
 	}
 
 	.course-form-sessions.empty{
 		
-		border: 3px dashed rgba(0, 0, 255, 0.2);
-		padding:20px;
-		background-color: #fff;
+		border: 3px dashed rgba(255, 0, 0, 0.6);
+    	padding: 60px 0px;
+    	background-color: rgba(255, 255, 100, 0.4);
+    	text-align: center;
+    	box-shadow: 0px 2px 5px #ddd;
+    	border-radius: 3px;
+    	margin-bottom: 20px;
 		
 	}
 
@@ -269,17 +344,17 @@ input.course-title-header{
 	width: 100%;
     border: none;
     margin: 0px;
-    font-size: 60px;
+    font-size: 70px;
     text-shadow: 0px 3px 1px #ccc;
-    text-indent: 10px;
     padding: 10px 0px;
     background: rgba(0,0,0,0);
-    color: rgba(255,0,0,.7);
+    color: rgba(36, 107, 204, 0.8);
     vertical-align: top;
 	border-top: 1px solid rgba(0,0,0,0);
     border-left: 1px solid rgba(0,0,0,0);
     border-right: 1px solid rgba(0,0,0,0);
     border-bottom: 1px solid rgba(0,0,0,0);
+    text-align:center;
 
 
 }
@@ -304,7 +379,9 @@ textarea.course-description-header{
     border-top: 1px solid #ccc;
 }
 
-
+textarea.course-description-header:focus{
+	border: 1px solid rgba(255, 0, 0, 0.4);
+}
 
 .add_fields{
 	width:50%;
@@ -315,6 +392,7 @@ textarea.course-description-header{
 
     background-color: rgba(36,107,204,0.8);
     border-radius: 5px;
+    line-height: 38px;
     color: white;
     border-bottom: 1px solid #246BCC;
     box-shadow: inset 0px 1px 1px 0px #bbb;
@@ -340,6 +418,7 @@ div.course-session-container{
     margin: 0 auto 20px auto;
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    float: left;
 }
 
 input.course-session-title-input{
@@ -347,13 +426,14 @@ input.course-session-title-input{
     font-size: 30px;
     color: #666;
     text-indent: 10px;
-    padding: 10px 0px;
+    padding: 12px 0px;
     border: none;
     vertical-align: top;
     border-top: 1px solid #ccc;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #fff;
+    float: left;
 }
 
 input.course-session-title-input:focus{
@@ -374,6 +454,7 @@ textarea.course-session-description-input{
     border-right: 1px solid #ccc;
     border-top: 1px solid #fff;
     resize: none;
+    float: left;
 }
 
 textarea.course-session-description-input:focus{
@@ -402,6 +483,33 @@ a.dismiss-course-session-container:hover{
 
 }
 
+.course-session-numbers{
+	display:inline-block;
+	width:30%;
+	float:left;	
+	vertical-align: top;
+	height: 120px;
+
+	background: rgba(100,255,100,0.8);
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    text-shadow: 0px 1px 0px #ccc;
+
+    p{
+    	line-height:120px;
+    	border: 1px solid #aaa;
+    }
+}
+
+.course-session-details{
+	display: inline-block;
+    width: 70%;
+    float:left;
+    background: red;
+    vertical-align: top;
+
+}
 
 
 
