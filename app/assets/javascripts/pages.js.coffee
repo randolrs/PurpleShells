@@ -25,8 +25,10 @@ ready = ->
 						location.reload(true)
 			
 			$("span.dismiss-modal").click (event), ->
+				textInput = $('body').find('input.modal-text-input')
 				coverPage = $(@).parent().parent().parent()
 				coverPage.hide()
+				textInput.val("")
 
 			$('a.dismiss-course-session-container').click (event), ->
 				alert("nowhere")

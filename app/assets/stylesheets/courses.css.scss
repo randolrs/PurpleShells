@@ -105,6 +105,10 @@ p.modal-submit{
 	border-radius: 3px;
 	margin:0 auto;
 	opacity: .85;
+	text-shadow: 0px 2px 1px #AD0000;
+	font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 p.modal-submit:hover{
@@ -126,7 +130,6 @@ div.course-form-container{
 
 		.course-form-menu-content{
 			width:auto;
-			background:#fff;
 			border-radius: 0px 0px 5px 5px;
 
 			.course-form-header{
@@ -217,9 +220,10 @@ div.course-form-container{
 
 		h3{
 			font-size:30px;
+			line-height: 20px;
 			font-weight: 400;
 			text-align:center;
-			color: #666;
+			color: #333;
 			margin-bottom: 20px;
 		}
 
@@ -264,25 +268,22 @@ div.course-form-container{
 input.course-title-header{
 	width: 100%;
     border: none;
-    background: #fff;
     margin: 0px;
-    font-size: 40px;
+    font-size: 60px;
+    text-shadow: 0px 3px 1px #ccc;
     text-indent: 10px;
     padding: 10px 0px;
-    background: #fff;
+    background: rgba(0,0,0,0);
     color: rgba(255,0,0,.7);
     vertical-align: top;
-    border-top: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #fff;
+	border-top: 1px solid rgba(0,0,0,0);
+    border-left: 1px solid rgba(0,0,0,0);
+    border-right: 1px solid rgba(0,0,0,0);
+    border-bottom: 1px solid rgba(0,0,0,0);
 
 
 }
 
-input.course-title-header:focus{
-	border: 1px solid rgba(255, 0, 0, 0.4);
-}
 
 textarea.course-description-header{
 	width: 100%;
@@ -290,6 +291,7 @@ textarea.course-description-header{
     border-bottom: 1px solid #ccc;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
+
     background: rgba(0, 0, 255, 0.15);
     margin: 0px;
     font-size: 16px;
@@ -302,9 +304,6 @@ textarea.course-description-header{
     border-top: 1px solid #ccc;
 }
 
-textarea.course-description-header:focus{
-	border: 1px solid rgba(255, 0, 0, 0.4);
-}
 
 
 .add_fields{
@@ -347,11 +346,14 @@ input.course-session-title-input{
 	width: 100%;
     font-size: 30px;
     color: #666;
-    text-indent: 5px;
+    text-indent: 10px;
     padding: 10px 0px;
     border: none;
     vertical-align: top;
-    border: 1px solid #fff;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #fff;
 }
 
 input.course-session-title-input:focus{
@@ -363,11 +365,14 @@ textarea.course-session-description-input{
     font-size: 16px;
     color: #999;
     font-style: italic;
-    text-indent: 5px;
+    text-indent: 10px;
     padding: 10px 0px;
     border: none;
     vertical-align: top;
-    border: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #fff;
     resize: none;
 }
 
