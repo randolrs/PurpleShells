@@ -28,7 +28,8 @@ ready = ->
 				coverPage = $(@).parent().parent().parent()
 				coverPage.hide()
 
-			$('.dismiss-course-session-container').click (event), ->
+			$('a.dismiss-course-session-container').click (event), ->
+				alert("nowhere")
 				courseSessionContainer = $(@).parent()
 				courseSessionContainer.hide()
 

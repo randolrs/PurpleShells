@@ -19,13 +19,8 @@
 
         <div class="course-form-header">
         
-          <%= f.text_field :title,  placeholder: "Course Title", class: "course-title-header" %><br>
-          <%= f.text_area :description,  placeholder: "Course Description", class: "course-description-header" %>
- 
-          <ul>
-              <li><a>Sessions:</a></li>
-              <li><a>Price:</a></li>
-          </ul>
+          <%= f.text_field :title,  placeholder: "Title of Your Course", class: "course-title-header" %>
+          <%= f.text_area :description,  placeholder: "Add a Course Description Here", class: "course-description-header" %>
 
           <%= f.submit "Submit Course for Approval", class: "course-submit-for-approval" %>
 
