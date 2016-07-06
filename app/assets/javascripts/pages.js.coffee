@@ -59,7 +59,9 @@ ready = ->
     			event.preventDefault()
 
   			$('form').on 'click', '.add_fields', (event) ->
-    			$(@).parent().removeClass("empty");
+    			$(@).parent().removeClass("empty")
+    			container = $('body').find('.course-form-session-container')
+    			container.addClass("empty")
     			time = new Date().getTime()
     			regexp = new RegExp($(this).data('id'), 'g')
     			$(this).before($(this).data('fields').replace(regexp, time))

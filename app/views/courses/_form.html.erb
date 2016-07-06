@@ -20,7 +20,7 @@
         <div class="course-form-header">
         
           <%= f.text_field :title,  placeholder: "Title of Your Course", class: "course-title-header" %>
-          <%= f.text_area :description,  placeholder: "Add a Course Description Here", class: "course-description-header" %>
+          <%= f.text_area :description,  placeholder: "Add a Description of Your Course", autofocus: true, class: "course-description-header" %>
 
           <%= f.submit "Submit Course for Approval", class: "course-submit-for-approval" %>
 
@@ -32,7 +32,7 @@
     
     <div class="course-form-session-container">
 
-      <h3>Sessions</h3>
+      <h3>Course Sessions</h3>
 
       <div class="course-form-sessions <% unless @course.course_sessions.count > 0 %>empty<%end%>">
 
