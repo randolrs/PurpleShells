@@ -1,4 +1,7 @@
-<%= form_for(@course) do |f| %>
+<%# form_for @course, :url => root_path do |f| %>
+
+<%= form_for @course do |f| %>
+
   <% if @course.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
