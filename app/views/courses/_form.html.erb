@@ -23,7 +23,11 @@
 
         <h3>Course Sessions for <span class="course-sessions-for-name"><%= @course.title%></span></h3>
 
+        <% @i = 0 %>
+
         <%= f.fields_for :course_sessions do |builder| %>
+
+          <% @i = @i + 1 %>
             
           <%= render 'course_session_fields', f: builder %>
 

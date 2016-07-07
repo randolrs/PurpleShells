@@ -30,10 +30,14 @@ ready = ->
 				coverPage.hide()
 				textInput.val("")
 
-			$('a.dismiss-course-session-container').click (event), ->
+			$('form').on 'click', 'p.dismiss-course-session', (event) ->
 				alert("nowhere")
-				courseSessionContainer = $(@).parent()
+				destroyBox = $(@).parent().find('.destroyer')
+				destroyBox.val('true')
+				alert(destroyBox.html())
+				courseSessionContainer = $(@).parent().parent()
 				courseSessionContainer.hide()
+				event.preventDefault()
 
 			$("p.teacher-dashboard-add-class-cta").click (event), ->
 				courseModal = $('body').find('div.course-name-modal')
