@@ -13,17 +13,15 @@
 
   <div class="course-form-container">
 
-
-
     <%= f.text_field :title,  placeholder: "Title of Your Course", class: "course-title-header" %>
 
     <div class="course-form-content">
 
-      <%= f.text_area :description,  placeholder: "Add a Description of Your Course Here", autofocus: true, class: "course-description-header" %>
-
-      <h3>Course Sessions for <span class="course-sessions-for-name"><%=@course.title%></span></h3>
+      <%= f.text_area :description,  placeholder: "Add a Description of Your Course Here", class: "course-description-header" %>
 
       <div class="course-form-sessions <% unless @course.course_sessions.count > 0 %>empty<%end%>">
+
+        <h3>Course Sessions for <span class="course-sessions-for-name"><%= @course.title%></span></h3>
 
         <%= f.fields_for :course_sessions do |builder| %>
             
@@ -31,15 +29,15 @@
 
         <% end %>
           
-        <%= link_to_add_fields "Add a Session", f, :course_sessions %>
+        <%= link_to_add_fields "Add a Course Session", f, :course_sessions %>
 
-        <input class="number-of-sessions" hidden type="number" val= <%=@course.course_sessions.count%> ></input>
+        <input class="number-of-sessions" id="number-of-sessions" type="number" hidden value= <%= @course.course_sessions.count %>></input>
 
       </div>
 
       <div class="course-form-submit <% unless @course.course_sessions.count > 0 %>empty<%end%>">
-       
-        <%= f.submit "Save and Submit Course for Approval", class: "course-submit-for-approval" %>
+
+        <%= f.submit "Finish and Submit for Scheduling", class: "course-submit-for-approval" %>
 
       </div>
 

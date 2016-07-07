@@ -42,9 +42,11 @@ ready = ->
 
 			$("p.modal-submit").click (event), ->
 				courseNameInput = $(@).parent().find('input.modal-text-input#title')
+				courseDescriptionInput = $(@).parent().find('textarea.modal-text-input#description')
 				courseName = courseNameInput.val()
+				courseDescription = courseDescriptionInput.val()
 				$.ajax
-					url: "/course/create/#{courseName}", format: 'js'
+					url: "/course/create/#{courseName}/#{courseDescription}", format: 'js'
 					type: "GET"
 					success: (data) ->
 						console.log(data)
@@ -62,12 +64,18 @@ ready = ->
 
   			$('form').on 'click', '.add_fields', (event) ->
     			$(@).parent().removeClass("empty")
+    			sessionsField = $('body').find('input.number-of-sessions#number-of-sessions')
+    			numberOfSessions = parseInt(sessionsField.val(), 10)
+    			newNumberOfSessions = numberOfSessions + 1
+    			sessionsField.val(newNumberOfSessions)
+    			sessionLabelString = "Session #" + newNumberOfSessions 
     			submitContainer = $('body').find('.course-form-submit')
     			container = $('body').find('.course-form-session-container')
     			container.addClass("empty")
     			time = new Date().getTime()
     			regexp = new RegExp($(this).data('id'), 'g')
     			$(this).before($(this).data('fields').replace(regexp, time))
+    			newSessionLabel = $(@).prev(".course-session-container").find('.session-number-label').html(sessionLabelString)
     			submitContainer.slideDown()
     			event.preventDefault()
 

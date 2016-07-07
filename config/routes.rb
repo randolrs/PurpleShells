@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   get "/user/city/:cityID", :to => 'pages#user_city_initialize'
 
-  get '/course/create/:courseName', :to => 'courses#ajax_create'
+  get '/course/create/:courseName/:courseDescription', :to => 'courses#ajax_create'
 
   get 'classes' => "pages#classes_summary"
 

@@ -18,10 +18,10 @@
 
 .course-name-modal-content{
 
-	max-width:400px;
+	max-width:500px;
 	width:100%;
 	margin:0 auto;
-	height:200px;
+	z-index: 100;
 	background: rgba(255,255,255,1);
 	border: 1px solid rgba(0,0,0,0.7);
     border-radius: 6px;
@@ -33,22 +33,22 @@
 
 	h3{
 		line-height: 40px;
-	    font-size: 20px;
+		margin-bottom: 20px;
+	    font-size: 28px;
+    	font-weight: 500;
 	    padding: 10px 15px;
 	    border-radius: 6px 6px 0px 0px;
-	    background: #ddd;
-	    border-bottom: 1px solid #aaa;
-	    color: #222;
-	    text-shadow: 0px 2px 0px #eee;
-	    box-shadow: 0px 0px 2px #999;
-	    background: #ddd;
-	    background-color: #ddd;
-	    background-image: -webkit-gradient(linear, left top, left bottom, from(#cccccc), to(#dddddd));
-	    background-image: -webkit-linear-gradient(top, #ddd, #bbb);
-	    background-image: -moz-linear-gradient(top, #cccccc, #dddddd);
-	    background-image: -ms-linear-gradient(top, #cccccc, #dddddd);
-	    background-image: -o-linear-gradient(top, #cccccc, #dddddd);
-	    background-image: linear-gradient(top, #cccccc, #dddddd);
+	    border-bottom: 1px solid #3232ff;
+	    color: #fff;
+	    text-shadow: 0px 2px 0px rgba(50,50,255,1);
+	    box-shadow: 0px 0px 1px #3232ff;
+	    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(50,50,255,.5)), to(rgba(50,50,255,.8)));
+	    background-image: -webkit-linear-gradient(top, rgba(50,50,255,.5), rgba(50,50,255,.8));
+	    background-image: -moz-linear-gradient(top, rgba(50,50,255,.5), rgba(50,50,255,.8));
+	    background-image: -ms-linear-gradient(top, rgba(50,50,255,.5), rgba(50,50,255,.8));
+	    background-image: -o-linear-gradient(top, rgba(50,50,255,.5), rgba(50,50,255,.8));
+	    background-image: linear-gradient(top, rgba(50,50,255,.5), rgba(50,50,255,.8));
+
 	    webkit-transition: all 0.2s ease;
 	    transition: all 0.2s ease;
 
@@ -63,9 +63,9 @@
     	top: -35px;
 	    font-size:30px;
 	    font-weight:500;
-	    color:#666;
 	    margin-top:30px;
-	    text-shadow: 0px 2px 1px #ccc;
+	    color: #fff;
+	    text-shadow: 1px 1px 2px #3232ff;
 	    line-height: 40px;
 	}
 
@@ -81,14 +81,29 @@
 
 .modal-text-input{
 	width:auto;
-	font-size:24px;
 	color:#666;
-	margin:20px auto;
+	margin:0px auto 20px auto;
     border-radius:2px;
     border:1px solid rgba(0,0,0,.3);
     text-indent:5px;
     background-color: #f1f1f1;
     padding:5px 0px;
+    width: 400px;
+
+}
+
+.modal-text-input#title{
+	font-size:30px;
+    
+}
+
+.modal-text-input#description{
+	font-size:16px;
+    background: rgba(0, 0, 255, 0.15);
+    color: #666;
+    font-style: italic;
+    resize: none;
+    
 }
 
 .modal-text-input:focus{
@@ -103,12 +118,14 @@ p.modal-submit{
 	background:red;
 	color: #fff;
 	border-radius: 3px;
-	margin:0 auto;
+	margin: 0px auto 20px;
 	opacity: .85;
 	text-shadow: 0px 2px 1px #AD0000;
 	font-size: 18px;
     font-weight: 500;
     letter-spacing: 1px;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: inset 0px 1px 3px 0px #fff;
 }
 
 p.modal-submit:hover{
@@ -137,6 +154,39 @@ div.course-form-container{
 		max-width:500px;
 		padding: 10px;
 		margin: 0 auto;
+		text-align: center;
+
+		.course-form-sessions{
+			
+			margin-top:30px;
+
+			h3{
+				display:block;
+				padding-bottom: 20px;
+	    		font-size: 24px;
+	    		color: #666;
+	    		font-weight: 400;
+	    		border-bottom: 2px solid #ccc;
+	    		margin-bottom: 30px;
+			}
+
+		}
+
+		.course-form-sessions.empty{
+		
+			border: 3px dashed rgba(255, 0, 0, 0.6);
+	    	padding: 60px 0px;
+	    	background-color: rgba(255, 255, 100, 0.4);
+	    	text-align: center;
+	    	box-shadow: 0px 2px 5px #ddd;
+	    	border-radius: 3px;
+	    	margin-bottom: 20px;
+
+	    	h3{
+	    		display:none;
+	    	}
+		
+		}
 
 		.course-submit-for-approval{
 			width:100%;
@@ -160,20 +210,11 @@ div.course-form-container{
 
 		}
 
-		h3{
-			padding: 20px 0px;
-    		font-size: 24px;
-    		color: #666;
-    		font-weight: 400;
-    		border-bottom: 2px solid #ccc;
-    		margin: 10px 0px 20px 0px;
-			}
-
 		.course-form-submit{
 			text-align:center;
 			border-top: 2px solid #ccc;
-    		padding: 20px 0px;
-    		margin-top:20px;
+    		padding: 30px 0px;
+    		margin-top:30px;
 			
 		}
 
@@ -200,8 +241,6 @@ div.course-form-container{
 		.course-form-menu-content{
 			width:auto;
 			border-radius: 0px 0px 5px 5px;
-
-
 
 			.course-form-header{
 
@@ -298,21 +337,6 @@ div.course-form-container{
 			margin-bottom: 20px;
 		}
 
-		.course-form-sessions{
-			
-			vertical-align: top;
-			padding:0px 0px;
-			text-align:center;
-			line-height: 50px;
-
-			.course-form-sessions-content{
-				width:auto;
-				padding: 0 10px;
-				border: 3px dashed #ddd;
-			}
-
-			
-		}
 
 	}
 
@@ -328,17 +352,7 @@ div.course-form-container{
 
 	}
 
-	.course-form-sessions.empty{
-		
-		border: 3px dashed rgba(255, 0, 0, 0.6);
-    	padding: 60px 0px;
-    	background-color: rgba(255, 255, 100, 0.4);
-    	text-align: center;
-    	box-shadow: 0px 2px 5px #ddd;
-    	border-radius: 3px;
-    	margin-bottom: 20px;
-		
-	}
+
 
 }
 
@@ -347,6 +361,7 @@ input.course-title-header{
     border: none;
     margin: 0px;
     font-size: 70px;
+    line-height: 90px;
     text-shadow: 0px 3px 1px #ccc;
     padding: 10px 0px;
     background: rgba(0,0,0,0);
@@ -394,7 +409,7 @@ textarea.course-description-header:focus{
 
     background-color: rgba(36,107,204,0.8);
     border-radius: 5px;
-    line-height: 38px;
+    line-height: 45px;
     color: white;
     border-bottom: 1px solid #246BCC;
     box-shadow: inset 0px 1px 1px 0px #bbb;

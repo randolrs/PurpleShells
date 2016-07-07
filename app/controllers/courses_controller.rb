@@ -47,7 +47,7 @@ class CoursesController < ApplicationController
     
       @course = Course.new
 
-      @course.update(:title => params[:courseName], :user_id => current_user.id)
+      @course.update(:title => params[:courseName], :description => params[:courseDescription], :user_id => current_user.id)
 
       if @course.save
 
