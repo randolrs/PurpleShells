@@ -112,7 +112,7 @@
 }
 
 
-p.modal-submit{
+p.modal-submit, input.modal-submit{
 	width:	50%;
 	padding:10px 20px;
 	background:red;
@@ -128,7 +128,7 @@ p.modal-submit{
     box-shadow: inset 0px 1px 3px 0px #fff;
 }
 
-p.modal-submit:hover{
+p.modal-submit:hover, input.modal-submit{
 	cursor:pointer;
 }
 
@@ -630,7 +630,4 @@ a.dismiss-course-session-container:hover{
 	vertical-align: top;
 	text-indent:10px;
 }
-
-
-
 

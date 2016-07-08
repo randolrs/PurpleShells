@@ -257,7 +257,7 @@ div.profile-sidebar{
     height: 300px;
 }
 
-.predictor-image-menu-profile{
+.user-image-menu-profile{
     width:100%;
     position:absolute;
 }
@@ -267,6 +267,7 @@ div.profile-sidebar{
     line-height:300px;
     width:100%;
     text-align:center;
+    height: 100%;
 
     a{
         background: rgba(0,0,200,.9);
@@ -287,6 +288,14 @@ div.profile-sidebar{
         box-shadow: none;
         border: 2px solid rgba(0,0,200,.9);
     }
+}
+
+.add-profile-image-text#default-off {
+    opacity:0;
+}
+
+.add-profile-image-text#default-off:hover {
+    opacity:1;
 }
 
 
@@ -313,10 +322,17 @@ div.profile-sidebar{
         border: 1px solid rgba(0,0,200,0.6);
         box-shadow: 0px 2px 2px #ccc;
         border-radius: 3px;
-        background: rgba(200,200,0,0.5);
+        background: rgba(240,240,40,0.5);
         color: #444;
         font-size: 20px;
         margin-bottom: 10px;
+    }
+
+    .form-control:hover{
+        cursor: pointer;
+        background: rgba(0,200,0,0.6);
+        color: #fff;
+        text-shadow: 0px 1px 2px #666;
     }
 }
 

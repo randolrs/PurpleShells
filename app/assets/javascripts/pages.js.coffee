@@ -102,5 +102,8 @@ ready = ->
 				textInput.val("")
 				$(@).hide()
 
+			$('img.user-image-menu-profile').mouseOver (event), ->
+				alert("hoi")
+
 $(document).ready(ready)
 $(document).on('page:load', ready)

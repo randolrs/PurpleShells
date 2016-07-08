@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   get 'pages/home'
 
+  put "/" => "pages#home", :as => "home"
+
   root 'pages#home'
 
   get "/user/city/:cityID", :to => 'pages#user_city_initialize'

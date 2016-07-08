@@ -71,9 +71,17 @@
 
 					<div class="dashboard-profile-image">
 
-						<%= image_tag current_user.image.url(:medium), class: "predictor-image-menu-profile"%>
+						<%= image_tag current_user.image.url(:medium), class: "user-image-menu-profile"%>
 
-						<span class="add-profile-image-text"><a class="add-profile-image-button">+ Add Your Picture</a></span>
+						<% if current_user.image.url == "missing_original.png" %>
+							
+							<span class="add-profile-image-text"><a class="add-profile-image-button">+ Add Your Picture</a></span>
+
+							<%else%>
+
+							<span class="add-profile-image-text" id="default-off"><a class="add-profile-image-button">Change Your Picture</a></span>
+
+						<% end %>
 
 						<%= render 'pages/users/add_profile_image_modal' %>
 						
@@ -82,7 +90,7 @@
 
 					<div class="teacher-menu-header">
 					
-						<h3>Shane Randolph</h3>
+						<h3><% current_user.name %></h3>
 
 					</div>
 

@@ -1,4 +1,4 @@
-<div class="profile-sidebar">
+<!-- <div class="profile-sidebar">
 
 	<ul>
 
@@ -9,8 +9,7 @@
 
 	</ul>
 
-</div>
-
+</div> -->
 
 
 <h2>Edit </h2>
@@ -25,9 +24,12 @@
   <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
 
+	<div><%= f.label :name %><br />
+  	<%= f.text_field :name %></div>
+
   <div><%= f.label :image %><br>
       
-      <%= image_tag current_predictor.image.url(:medium, :width => 50, :height => 50), class: "predictor-image-small"%>
+      <%= image_tag current_user.image.url(:medium, :width => 50, :height => 50), class: "predictor-image-small"%>
       <br>
       <%= f.file_field :image, class: "form-control" %>
  	</div>
