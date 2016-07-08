@@ -6,25 +6,26 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-	<% flash.each do |name, msg| %>
-     <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
-	<% end %>
+	<body>
 
-<%= render 'layouts/header_responsive'%>
+		<%= render 'layouts/header_responsive'%>
 
-<div class="fixed-header-offset">
+			<% flash.each do |name, msg| %>
+		     <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+			<% end %>
 
-	<%= yield %>
+		<div class="fixed-header-offset">
 
-</div>
+			<%= yield %>
 
-<% unless @hide_footer%>
-	<%= render 'layouts/footer'%>
-	<div class="ajax-loading"></div>
-<%end%>
+		</div>
 
-</body>
+		<% unless @hide_footer%>
+			<%= render 'layouts/footer'%>
+			<div class="ajax-loading"></div>
+		<%end%>
+
+	</body>
 
 </html>

@@ -90,13 +90,14 @@
 
 					<div class="teacher-menu-header">
 					
-						<h3><% current_user.name %></h3>
+						<h3><%= current_user.name %></h3>
 
 					</div>
 
 					<ul>
 						<li><a>My Courses</a></li>
 						<li><a>Balance</a></li>
+						<li><a><%= link_to "Edit Profile", edit_user_registration_path(current_user) %></a></li>
 					</ul>
 
 				</div>
