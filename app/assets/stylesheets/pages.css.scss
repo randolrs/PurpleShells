@@ -181,7 +181,6 @@
 
 div.teacher-dashboard-container{
 	margin:0 auto;
-	padding:50px;
 	max-width:1000px;
 	width:auto;
 
@@ -244,9 +243,10 @@ div.teacher-dashboard-container{
 	}
 
 	.teacher-dashboard-classes{
-		display:inline-block;
-		width:670px;
-		vertical-align: top;
+		display: inline-block;
+    	width: 650px;
+    	vertical-align: top;
+    	padding: 0px 10px;
 
 
 		.teacher-dashboard-class-content{

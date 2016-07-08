@@ -63,7 +63,11 @@ class User < ActiveRecord::Base
 
          def has_a_saved_class
 
-            return false
+            if self.courses.count > 0
+                return true
+            else
+                return false
+            end
 
          end
 end

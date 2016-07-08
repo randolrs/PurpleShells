@@ -5,4 +5,12 @@ class Course < ActiveRecord::Base
 	belongs_to :user
 
 	accepts_nested_attributes_for :course_sessions, allow_destroy: true
+
+	def instructor_name
+
+		instructor = User.find(self.user_id)
+
+		return instructor.name
+
+	end
 end
