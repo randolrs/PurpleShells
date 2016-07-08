@@ -102,7 +102,7 @@ ready = ->
 				textInput.val("")
 				$(@).hide()
 
-			$('img.user-image-menu-profile').mouseOver (event), ->
+			$('p.modal-submit#user-profile-image').click (event), ->
 				alert("hoi")
 
 $(document).ready(ready)
