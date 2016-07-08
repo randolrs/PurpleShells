@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  
   def home
 
 	@topics_index = ClassTopic.all.where(:parent_topic_id =>1)

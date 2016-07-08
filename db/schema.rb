@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160707201909) do
+ActiveRecord::Schema.define(version: 20160708154551) do
 
   create_table "cities", force: true do |t|
     t.string   "name"
@@ -82,6 +82,10 @@ ActiveRecord::Schema.define(version: 20160707201909) do
     t.integer  "default_location",          default: 1
     t.integer  "default_city_id"
     t.integer  "city_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
