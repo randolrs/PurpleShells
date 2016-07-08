@@ -1,0 +1,32 @@
+<div class="add-profile-image-modal">
+
+	<div class ="course-name-modal-content">
+
+	    <h3>Add Profile Picture
+	      <span class="dismiss-modal">
+	        +
+	      </span>
+	    </h3>
+
+	    <%= form_for(current_user, url: registration_path(current_user), html: { method: :put }) do |f| %>
+
+	    	<div class ="profile-image-modal-container">
+
+	    		<%= image_tag current_user.image.url(:medium), class: "profile-image-modal"%>
+	    	
+	    	</div>
+
+	    	<div class="profile-image-modal-input-container">
+
+	    		<%= f.file_field :image, class: "form-control" %>
+
+	    	</div>
+
+	    <% end %>
+
+	    <p class="modal-submit" id="profile-image">Update Profile Picture</p>
+
+	</div>
+
+
+</div>

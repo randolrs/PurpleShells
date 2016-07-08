@@ -44,7 +44,7 @@ ready = ->
 				courseModal.show()
 				event.preventDefault()
 
-			$("p.modal-submit").click (event), ->
+			$("p.modal-submit#courses").click (event), ->
 				courseNameInput = $(@).parent().find('input.modal-text-input#title')
 				courseDescriptionInput = $(@).parent().find('textarea.modal-text-input#description')
 				courseName = courseNameInput.val()
@@ -86,6 +86,21 @@ ready = ->
     		$('form').on 'click', '.add_fields.course_sessions', (event) ->
     			alert("addition")
     			event.preventDefault()
+
+    		$('a.add-profile-image-button').click (event), ->
+    			profileImageModal = $('body').find('div.add-profile-image-modal')
+    			profileImageModal.show()
+
+    		$('div.course-name-modal-content').click (event), ->
+    			event.stopPropagation()
+
+    		$('div.add-profile-image-modal').click (event), ->
+    			$(@).hide()
+
+			$('div.course-name-modal').click (event), ->
+				textInput = $('body').find('input.modal-text-input')
+				textInput.val("")
+				$(@).hide()
 
 $(document).ready(ready)
 $(document).on('page:load', ready)

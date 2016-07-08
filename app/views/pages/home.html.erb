@@ -69,7 +69,16 @@
 
 				<div class="teacher-dashboard-menu-content">
 
-					<%= image_tag current_user.image.url(:medium, :width => 50, :height => 50), class: "predictor-image-menu-profile"%>
+					<div class="dashboard-profile-image">
+
+						<%= image_tag current_user.image.url(:medium), class: "predictor-image-menu-profile"%>
+
+						<span class="add-profile-image-text"><a class="add-profile-image-button">+ Add Your Picture</a></span>
+
+						<%= render 'pages/users/add_profile_image_modal' %>
+						
+
+					</div>
 
 					<div class="teacher-menu-header">
 					
