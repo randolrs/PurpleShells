@@ -18,6 +18,17 @@ class User < ActiveRecord::Base
     validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
 
+        # bypasses Devise's requirement to re-enter current password to edit
+    def update_with_password(params={}) 
+      if params[:password].blank? 
+        params.delete(:password) 
+        params.delete(:password_confirmation) if params[:password_confirmation].blank? 
+      end 
+      update_attributes(params) 
+    end
+
+
+
          def full_name
 
          	if self.name

@@ -8,13 +8,13 @@
 </head>
 <body>
 
-<%= render 'layouts/header_responsive'%>
-
-<div class="fixed-header-offset">
-
 	<% flash.each do |name, msg| %>
      <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
 	<% end %>
+
+<%= render 'layouts/header_responsive'%>
+
+<div class="fixed-header-offset">
 
 	<%= yield %>
 

@@ -8,7 +8,12 @@
 	      </span>
 	    </h3>
 
-	    <%= form_for(current_user, url: home_path, html: { method: :put }) do |f| %>
+	    <%# form_for(current_user) do |f| %>
+
+	    <%# form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+
+
+	    <%= form_for(current_user, url: registration_path(current_user), html: { method: :put }) do |f| %>
 
 	    	<div class ="profile-image-modal-container">
 
