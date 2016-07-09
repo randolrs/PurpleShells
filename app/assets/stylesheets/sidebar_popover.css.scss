@@ -6,42 +6,53 @@
 
 .header-for-sidebar{
   
-  background:rgba(0,0,30,1);
-  text-align:center;
-  border-bottom: 1px solid #ccc;
-  box-shadow: 0 3px 2px -2px rgba(0,0,0,0.2);
+    background: linear-gradient(#1e1e9a, #1e1e5a);
+    text-align: center;
+    border-bottom: 1px solid #1e1e5a;
+    box-shadow: 0px 2px 4px #aaa;
+    
+    border: 2px solid rgba(0, 0, 80, 0.9);
 
-  a.app-name{
-    margin:0px;
-    display:inline;
-    font-weight: 700;
-    font-size: 45px;
-    color: rgba(255, 255, 255, 0.9);
-    opacity: 0.9;
+  span.header-app-name-container{
+    display: block;
+    padding: 5px 0px;
+    box-shadow: inset 0px 3px 6px -3px #fff;
+  }
+
+  p.app-name{
+    margin: 0px;
+    display: inline;
+    font-weight: 400;
+    font-size: 41px;
+    color: white;
+    opacity: 1;
+    text-shadow: 0px 2px 1px rgba(255,100,200,1);
+    letter-spacing: 3px;
   }
 
 }
 
 
 p.menu-button{
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  background: rgba(0, 0, 100, 0.9);
-  z-index: 10000003;
-  color: #fff;
-  padding: 15px 60px 15px 30px;
-  font-size: 22px;
-  border: 2px solid rgba(0, 0, 80, 0.9);
-  text-shadow: 0px 2px #00001e;
-  box-shadow: inset 0px 3px 6px -3px #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10000003;
+    color: #fff;
+    padding: 17px 60px 17px 30px;
+    font-size: 22px;
+    border: 2px solid rgba(0, 0, 30, 0.9);
+    text-shadow: 0px 2px #00001e;
+    box-shadow: inset 0px 3px 6px -3px #fff;
+    background: #222;
 
 }
 
 p.menu-button:hover{
   cursor:pointer;
-  background:rgba(0,0,30,1);
-  color: #fff; 
+  background:#666;
+  text-shadow: 0px 2px #333;
+  border: 2px solid #555;
 }
 
 
@@ -53,7 +64,7 @@ p.menu-button::before {
   width: 22px;
   border-top: 2px solid #fff;
   right: 25px;
-  top: 38px;
+  top: 40px;
 }
 
 p.menu-button::after{
@@ -65,7 +76,7 @@ p.menu-button::after{
   border-top: 2px solid #fff;
   border-bottom: 2px solid #fff;
   right: 25px;
-  top: 24px;
+  top: 26px;
 }
 
 .sidebar-fixed-container{
@@ -92,4 +103,24 @@ p.menu-button::after{
   z-index: 1000001;
   display: inline-block;
   
+}
+
+.dismiss-sidebar{
+    border: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    left: 270px;
+    font-size:30px;
+    font-weight:400;
+    color:#fff;
+    text-shadow: 1px 1px 1px #333;
+}
+
+.dismiss-sidebar:hover{
+    cursor: pointer;
+}
+
+.no-scroll{
+  overflow:hidden;
 }

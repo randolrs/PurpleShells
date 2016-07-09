@@ -108,13 +108,24 @@ ready = ->
 			$('p.menu-button').click (event), ->
 				sidebarMenu = $('body').find('.sidebar-fixed-container.default-off')
 				sidebarMenu.show()
+				$(@).hide()
+				$('body').addClass("no-scroll")
 				event.preventDefault()
 
 			$('div.sidebar-fixed-container').click (event), ->
 				$(@).hide()
+				menuButton = $('body').find('p.menu-button')
+				menuButton.show()
+				$('body').removeClass("no-scroll")
 
 			$('div.sidebar-fixed-content').click (event), ->
 				event.stopPropagation()
+
+			$('span.dismiss-sidebar').click (event), ->
+				$('body').find('div.sidebar-fixed-container').hide()
+				menuButton = $('body').find('p.menu-button')
+				menuButton.show()
+				$('body').removeClass("no-scroll")
 
 $(document).ready(ready)
 $(document).on('page:load', ready)
