@@ -14,19 +14,28 @@
 
       <ul>
 
-         <li class="sidebar-list-header"><a>Home</a></li>
+         <li class="sidebar-list-header"><%= link_to "Home", root_path %></li>
          <li class="sidebar-list-entry"><a>My Courses</a></li>
          <li class="sidebar-list-entry"><a>Balance: <span>$14.00</span></a></li>
 
-         <li class="sidebar-list-header"><a>My Profile</a></li>
+         <li class="sidebar-list-header"><a>Profile</a></li>
          <li class="sidebar-list-entry"><a>Update Information</a></li>
          <li class="sidebar-list-entry"><a>Payments</a></li>
 
-         <li class="sidebar-list-header"><a>Info</a></li>
+         <li class="sidebar-list-header"><a>More</a></li>
          <li class="sidebar-list-entry"><a>About</a></li>
          <li class="sidebar-list-entry"><a>Contact</a></li>
-         <li class="sidebar-list-entry"><a>Signup</a></li>
-         <li class="sidebar-list-entry"><a>Teach a Class</a></li>
+
+         <% if user_signed_in? %>
+            
+            <li class="sidebar-list-entry"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+
+         <%else%>
+
+            <li class="sidebar-list-entry"><a>Signup</a></li>
+            <li class="sidebar-list-entry"><a>Teach a Class</a></li>
+
+         <%end%>
 
       </ul>
 
