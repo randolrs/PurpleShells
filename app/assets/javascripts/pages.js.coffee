@@ -105,5 +105,16 @@ ready = ->
 			$('p.modal-submit#user-profile-image').click (event), ->
 				alert("hoi")
 
+			$('p.menu-button').click (event), ->
+				sidebarMenu = $('body').find('.sidebar-fixed-container.default-off')
+				sidebarMenu.show()
+				event.preventDefault()
+
+			$('div.sidebar-fixed-container').click (event), ->
+				$(@).hide()
+
+			$('div.sidebar-fixed-content').click (event), ->
+				event.stopPropagation()
+
 $(document).ready(ready)
 $(document).on('page:load', ready)

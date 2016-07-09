@@ -1,0 +1,95 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+.header-for-sidebar{
+  
+  background:rgba(0,0,30,1);
+  text-align:center;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 3px 2px -2px rgba(0,0,0,0.2);
+
+  a.app-name{
+    margin:0px;
+    display:inline;
+    font-weight: 700;
+    font-size: 45px;
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 0.9;
+  }
+
+}
+
+
+p.menu-button{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 100, 0.9);
+  z-index: 10000003;
+  color: #fff;
+  padding: 15px 60px 15px 30px;
+  font-size: 22px;
+  border: 2px solid rgba(0, 0, 80, 0.9);
+  text-shadow: 0px 2px #00001e;
+  box-shadow: inset 0px 3px 6px -3px #fff;
+
+}
+
+p.menu-button:hover{
+  cursor:pointer;
+  background:rgba(0,0,30,1);
+  color: #fff; 
+}
+
+
+p.menu-button::before {
+  display: block;
+  content: '';
+  position: absolute;
+  height: 12px;
+  width: 22px;
+  border-top: 2px solid #fff;
+  right: 25px;
+  top: 38px;
+}
+
+p.menu-button::after{
+  display: block;
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 22px;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  right: 25px;
+  top: 24px;
+}
+
+.sidebar-fixed-container{
+  position:fixed;
+  top: 0px;
+  bottom:0px;
+  left:0px;
+  right: 0px;
+  background: rgba(20,20,100,0.8);
+  z-index: 1000000;
+
+
+}
+
+.sidebar-fixed-container.default-off{
+    display: none;
+  }
+
+
+.sidebar-fixed-content{
+  width:300px;
+  height: 100%;
+  background: rgba(50,0,50,1);
+  z-index: 1000001;
+  display: inline-block;
+  
+}

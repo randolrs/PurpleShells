@@ -9,7 +9,9 @@
 
 	<body>
 
-		<%= render 'layouts/header_responsive'%>
+		<%= render 'layouts/header_for_sidebar'%>
+
+		<%= render 'layouts/sidebar_popover'%>
 
 			<% flash.each do |name, msg| %>
 		     <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
