@@ -52,7 +52,7 @@ textarea:focus, input:focus{
 }
 
 .fixed-header-offset{
-	padding:120px 0px 60px 0px;
+	padding:60px 0px;
 	min-height:100%;
 	min-width:100%;
   position: relative;
