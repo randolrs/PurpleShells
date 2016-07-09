@@ -7,6 +7,9 @@
 .header-for-sidebar{
   
     background: linear-gradient(#1e1e9a, #1e1e5a);
+
+
+
     text-align: center;
     border-bottom: 1px solid #1e1e5a;
     box-shadow: 0px 2px 4px #aaa;
@@ -85,7 +88,7 @@ p.menu-button::after{
   bottom:0px;
   left:0px;
   right: 0px;
-  background: rgba(20,20,100,0.8);
+  background: rgba(50,50,100,0.8);
   z-index: 1000000;
 
 
@@ -99,9 +102,88 @@ p.menu-button::after{
 .sidebar-fixed-content{
   width:300px;
   height: 100%;
-  background: rgba(50,0,50,1);
+  background: #B4B4FF;
   z-index: 1000001;
   display: inline-block;
+  color: #1e1e9a;
+  border-right: 2px solid rgba(0, 0, 80, 0.9);
+
+  p{
+    width:100%;
+    padding: 15px 0px;
+    color: #fff;
+    background: #222;
+    text-indent: 10px;
+    font-size: 30px;
+    text-shadow: 0px 2px #111;
+  }
+
+  ul{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+  li{
+
+    display: inline-block !important;
+      width: 100% !important;
+      word-wrap: break-word !important;
+      text-align: justify;
+      padding:0px;
+      border-bottom: 1px solid rgba(0, 0, 80, 0.9);
+      
+      a{
+        text-indent: 15px;
+        display: block;
+        padding:10px 0px;
+        font-size: 20px;
+      }
+
+      a:hover{
+        cursor: pointer;
+      }
+
+    }
+
+
+    li.sidebar-list-header{
+      background: linear-gradient(#1e1e9a, #1e1e5a);
+      text-shadow: 0px 2px 1px #222;
+
+      box-shadow: inset 0px 3px 6px -3px #fff;
+    
+      border: 1px solid rgba(0, 0, 80, 0.9);
+      color: #fff;
+
+
+      a{
+        font-weight: 600;
+        color: #fff;
+      }
+
+      a:hover{
+        text-shadow: none;
+      }
+    }
+
+
+  li.sidebar-list-entry{
+      
+      a{
+        text-indent: 20px;
+
+      }
+
+      a:hover{
+        color: blue;
+        background: #fff;
+      }
+
+    }
+
+
+  }
   
 }
 
